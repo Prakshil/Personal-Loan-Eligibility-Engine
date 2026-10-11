@@ -25,6 +25,10 @@ R_SBI_023,State Bank of India (SBI),Real-Time Xpress Credit,income,salary_credit
 R_SBI_024,State Bank of India (SBI),Real-Time Xpress Credit,income,cash_salary_accepted,==,false
 R_SBI_025,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,min_cibil_score,>=,650
 R_SBI_026,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,allow_ntc_thin_file,==,false
+R_SBI_027,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,max_dpd_last_12m,<=,0
+R_SBI_028,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,hard_enquiries_last_30d,<=,3
+R_SBI_029,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,active_overdue_inr,==,0
+R_SBI_030,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,written_off_accounts_allowed,==,0
 R_PNB_001,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,product_name,==,PNB Sahyog Personal Loan
 R_PNB_002,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,product_type,==,personal_loan
 R_PNB_003,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,secured_flag,==,unsecured
@@ -51,6 +55,10 @@ R_PNB_023,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,salary_cred
 R_PNB_024,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,cash_salary_accepted,==,false
 R_PNB_025,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,min_cibil_score,>=,680
 R_PNB_026,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_PNB_027,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,max_dpd_last_12m,<=,0
+R_PNB_028,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,3
+R_PNB_029,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_PNB_030,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_BOB_001,Bank of Baroda,Baroda Personal Loan,product,product_name,==,Baroda Personal Loan
 R_BOB_002,Bank of Baroda,Baroda Personal Loan,product,product_type,==,personal_loan
 R_BOB_003,Bank of Baroda,Baroda Personal Loan,product,secured_flag,==,unsecured
@@ -77,6 +85,10 @@ R_BOB_023,Bank of Baroda,Baroda Personal Loan,income,salary_credit_mode_allowed,
 R_BOB_024,Bank of Baroda,Baroda Personal Loan,income,cash_salary_accepted,==,false
 R_BOB_025,Bank of Baroda,Baroda Personal Loan,credit_bureau,min_cibil_score,>=,701
 R_BOB_026,Bank of Baroda,Baroda Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_BOB_027,Bank of Baroda,Baroda Personal Loan,credit_bureau,max_dpd_last_12m,<=,0
+R_BOB_028,Bank of Baroda,Baroda Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,3
+R_BOB_029,Bank of Baroda,Baroda Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_BOB_030,Bank of Baroda,Baroda Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_CANARA_001,Canara Bank,Canara Budget Personal Loan,product,product_name,==,Canara Budget Personal Loan
 R_CANARA_002,Canara Bank,Canara Budget Personal Loan,product,product_type,==,personal_loan
 R_CANARA_003,Canara Bank,Canara Budget Personal Loan,product,secured_flag,==,unsecured
@@ -103,6 +115,10 @@ R_CANARA_023,Canara Bank,Canara Budget Personal Loan,income,salary_credit_mode_a
 R_CANARA_024,Canara Bank,Canara Budget Personal Loan,income,cash_salary_accepted,==,false
 R_CANARA_025,Canara Bank,Canara Budget Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_CANARA_026,Canara Bank,Canara Budget Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_CANARA_027,Canara Bank,Canara Budget Personal Loan,credit_bureau,max_dpd_last_12m,<=,0
+R_CANARA_028,Canara Bank,Canara Budget Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,3
+R_CANARA_029,Canara Bank,Canara Budget Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_CANARA_030,Canara Bank,Canara Budget Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_HDFC_001,HDFC Bank,HDFC Bank Personal Loan,product,product_name,==,HDFC Bank Personal Loan
 R_HDFC_002,HDFC Bank,HDFC Bank Personal Loan,product,product_type,==,personal_loan
 R_HDFC_003,HDFC Bank,HDFC Bank Personal Loan,product,secured_flag,==,unsecured
@@ -129,6 +145,10 @@ R_HDFC_023,HDFC Bank,HDFC Bank Personal Loan,income,salary_credit_mode_allowed,=
 R_HDFC_024,HDFC Bank,HDFC Bank Personal Loan,income,cash_salary_accepted,==,false
 R_HDFC_025,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,min_cibil_score,>=,720
 R_HDFC_026,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_HDFC_027,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_HDFC_028,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_HDFC_029,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_HDFC_030,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_ICICI_001,ICICI Bank,ICICI Instant Personal Loan,product,product_name,==,ICICI Instant Personal Loan
 R_ICICI_002,ICICI Bank,ICICI Instant Personal Loan,product,product_type,==,personal_loan
 R_ICICI_003,ICICI Bank,ICICI Instant Personal Loan,product,secured_flag,==,unsecured
@@ -155,6 +175,10 @@ R_ICICI_023,ICICI Bank,ICICI Instant Personal Loan,income,salary_credit_mode_all
 R_ICICI_024,ICICI Bank,ICICI Instant Personal Loan,income,cash_salary_accepted,==,false
 R_ICICI_025,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_ICICI_026,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_ICICI_027,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_ICICI_028,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_ICICI_029,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_ICICI_030,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_AXIS_001,Axis Bank,Axis 24x7 Personal Loan,product,product_name,==,Axis 24x7 Personal Loan
 R_AXIS_002,Axis Bank,Axis 24x7 Personal Loan,product,product_type,==,personal_loan
 R_AXIS_003,Axis Bank,Axis 24x7 Personal Loan,product,secured_flag,==,unsecured
@@ -181,6 +205,10 @@ R_AXIS_023,Axis Bank,Axis 24x7 Personal Loan,income,salary_credit_mode_allowed,=
 R_AXIS_024,Axis Bank,Axis 24x7 Personal Loan,income,cash_salary_accepted,==,false
 R_AXIS_025,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_AXIS_026,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_AXIS_027,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_AXIS_028,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_AXIS_029,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_AXIS_030,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_KOTAK_001,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,product_name,==,Kotak Salaried Personal Loan
 R_KOTAK_002,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,product_type,==,personal_loan
 R_KOTAK_003,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,secured_flag,==,unsecured
@@ -207,6 +235,10 @@ R_KOTAK_023,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,salary_credi
 R_KOTAK_024,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,cash_salary_accepted,==,false
 R_KOTAK_025,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,min_cibil_score,>=,710
 R_KOTAK_026,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_KOTAK_027,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_KOTAK_028,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_KOTAK_029,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_KOTAK_030,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_INDUSIND_001,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,product_name,==,IndusInd Multi-Purpose Personal Loan
 R_INDUSIND_002,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,product_type,==,personal_loan
 R_INDUSIND_003,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,secured_flag,==,unsecured
@@ -233,6 +265,10 @@ R_INDUSIND_023,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,salary_
 R_INDUSIND_024,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,cash_salary_accepted,==,false
 R_INDUSIND_025,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_INDUSIND_026,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_INDUSIND_027,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_INDUSIND_028,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_INDUSIND_029,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_INDUSIND_030,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_IDFC_001,IDFC FIRST Bank,FIRST Personal Loan,product,product_name,==,FIRST Personal Loan
 R_IDFC_002,IDFC FIRST Bank,FIRST Personal Loan,product,product_type,==,personal_loan
 R_IDFC_003,IDFC FIRST Bank,FIRST Personal Loan,product,secured_flag,==,unsecured
@@ -259,6 +295,10 @@ R_IDFC_023,IDFC FIRST Bank,FIRST Personal Loan,income,salary_credit_mode_allowed
 R_IDFC_024,IDFC FIRST Bank,FIRST Personal Loan,income,cash_salary_accepted,==,false
 R_IDFC_025,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_IDFC_026,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_IDFC_027,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_IDFC_028,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_IDFC_029,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_IDFC_030,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_YES_001,Yes Bank,Yes Bank Personal Loan,product,product_name,==,Yes Bank Personal Loan
 R_YES_002,Yes Bank,Yes Bank Personal Loan,product,product_type,==,personal_loan
 R_YES_003,Yes Bank,Yes Bank Personal Loan,product,secured_flag,==,unsecured
@@ -285,6 +325,10 @@ R_YES_023,Yes Bank,Yes Bank Personal Loan,income,salary_credit_mode_allowed,==,D
 R_YES_024,Yes Bank,Yes Bank Personal Loan,income,cash_salary_accepted,==,false
 R_YES_025,Yes Bank,Yes Bank Personal Loan,credit_bureau,min_cibil_score,>=,700
 R_YES_026,Yes Bank,Yes Bank Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_YES_027,Yes Bank,Yes Bank Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_YES_028,Yes Bank,Yes Bank Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,4
+R_YES_029,Yes Bank,Yes Bank Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_YES_030,Yes Bank,Yes Bank Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_BAJAJ_001,Bajaj Finance,Bajaj Insta Personal Loan,product,product_name,==,Bajaj Insta Personal Loan
 R_BAJAJ_002,Bajaj Finance,Bajaj Insta Personal Loan,product,product_type,==,personal_loan
 R_BAJAJ_003,Bajaj Finance,Bajaj Insta Personal Loan,product,secured_flag,==,unsecured
@@ -311,6 +355,10 @@ R_BAJAJ_023,Bajaj Finance,Bajaj Insta Personal Loan,income,salary_credit_mode_al
 R_BAJAJ_024,Bajaj Finance,Bajaj Insta Personal Loan,income,cash_salary_accepted,==,false
 R_BAJAJ_025,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,min_cibil_score,>=,685
 R_BAJAJ_026,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_BAJAJ_027,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_BAJAJ_028,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_BAJAJ_029,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_BAJAJ_030,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_TATA_001,Tata Capital,Tata Capital Personal Loan,product,product_name,==,Tata Capital Personal Loan
 R_TATA_002,Tata Capital,Tata Capital Personal Loan,product,product_type,==,personal_loan
 R_TATA_003,Tata Capital,Tata Capital Personal Loan,product,secured_flag,==,unsecured
@@ -337,6 +385,10 @@ R_TATA_023,Tata Capital,Tata Capital Personal Loan,income,salary_credit_mode_all
 R_TATA_024,Tata Capital,Tata Capital Personal Loan,income,cash_salary_accepted,==,false
 R_TATA_025,Tata Capital,Tata Capital Personal Loan,credit_bureau,min_cibil_score,>=,675
 R_TATA_026,Tata Capital,Tata Capital Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_TATA_027,Tata Capital,Tata Capital Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_TATA_028,Tata Capital,Tata Capital Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_TATA_029,Tata Capital,Tata Capital Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_TATA_030,Tata Capital,Tata Capital Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_ABFL_001,Aditya Birla Capital,Aditya Birla Personal Loan,product,product_name,==,Aditya Birla Personal Loan
 R_ABFL_002,Aditya Birla Capital,Aditya Birla Personal Loan,product,product_type,==,personal_loan
 R_ABFL_003,Aditya Birla Capital,Aditya Birla Personal Loan,product,secured_flag,==,unsecured
@@ -363,6 +415,10 @@ R_ABFL_023,Aditya Birla Capital,Aditya Birla Personal Loan,income,salary_credit_
 R_ABFL_024,Aditya Birla Capital,Aditya Birla Personal Loan,income,cash_salary_accepted,==,false
 R_ABFL_025,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,min_cibil_score,>=,675
 R_ABFL_026,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_ABFL_027,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_ABFL_028,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_ABFL_029,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_ABFL_030,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_LTFS_001,L&T Finance,L&T Finance Consumer Loan,product,product_name,==,L&T Finance Consumer Loan
 R_LTFS_002,L&T Finance,L&T Finance Consumer Loan,product,product_type,==,personal_loan
 R_LTFS_003,L&T Finance,L&T Finance Consumer Loan,product,secured_flag,==,unsecured
@@ -389,6 +445,10 @@ R_LTFS_023,L&T Finance,L&T Finance Consumer Loan,income,salary_credit_mode_allow
 R_LTFS_024,L&T Finance,L&T Finance Consumer Loan,income,cash_salary_accepted,==,false
 R_LTFS_025,L&T Finance,L&T Finance Consumer Loan,credit_bureau,min_cibil_score,>=,670
 R_LTFS_026,L&T Finance,L&T Finance Consumer Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_LTFS_027,L&T Finance,L&T Finance Consumer Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_LTFS_028,L&T Finance,L&T Finance Consumer Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_LTFS_029,L&T Finance,L&T Finance Consumer Loan,credit_bureau,active_overdue_inr,==,0
+R_LTFS_030,L&T Finance,L&T Finance Consumer Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_POONAWALLA_001,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,product_name,==,Poonawalla Instant Personal Loan
 R_POONAWALLA_002,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,product_type,==,personal_loan
 R_POONAWALLA_003,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,secured_flag,==,unsecured
@@ -415,6 +475,10 @@ R_POONAWALLA_023,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,sala
 R_POONAWALLA_024,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,cash_salary_accepted,==,false
 R_POONAWALLA_025,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,min_cibil_score,>=,670
 R_POONAWALLA_026,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_POONAWALLA_027,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_POONAWALLA_028,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_POONAWALLA_029,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_POONAWALLA_030,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_PIRAMAL_001,Piramal Finance,Piramal Flexible Personal Loan,product,product_name,==,Piramal Flexible Personal Loan
 R_PIRAMAL_002,Piramal Finance,Piramal Flexible Personal Loan,product,product_type,==,personal_loan
 R_PIRAMAL_003,Piramal Finance,Piramal Flexible Personal Loan,product,secured_flag,==,unsecured
@@ -441,6 +505,10 @@ R_PIRAMAL_023,Piramal Finance,Piramal Flexible Personal Loan,income,salary_credi
 R_PIRAMAL_024,Piramal Finance,Piramal Flexible Personal Loan,income,cash_salary_accepted,==,false
 R_PIRAMAL_025,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,min_cibil_score,>=,650
 R_PIRAMAL_026,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_PIRAMAL_027,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,max_dpd_last_12m,<=,60
+R_PIRAMAL_028,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,5
+R_PIRAMAL_029,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_PIRAMAL_030,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_NAVI_001,Navi,Navi Digital Personal Loan,product,product_name,==,Navi Digital Personal Loan
 R_NAVI_002,Navi,Navi Digital Personal Loan,product,product_type,==,personal_loan
 R_NAVI_003,Navi,Navi Digital Personal Loan,product,secured_flag,==,unsecured
@@ -467,6 +535,10 @@ R_NAVI_023,Navi,Navi Digital Personal Loan,income,salary_credit_mode_allowed,==,
 R_NAVI_024,Navi,Navi Digital Personal Loan,income,cash_salary_accepted,==,false
 R_NAVI_025,Navi,Navi Digital Personal Loan,credit_bureau,min_cibil_score,>=,650
 R_NAVI_026,Navi,Navi Digital Personal Loan,credit_bureau,allow_ntc_thin_file,==,true
+R_NAVI_027,Navi,Navi Digital Personal Loan,credit_bureau,max_dpd_last_12m,<=,60
+R_NAVI_028,Navi,Navi Digital Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,6
+R_NAVI_029,Navi,Navi Digital Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_NAVI_030,Navi,Navi Digital Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_MONEYTAP_001,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,product_name,==,MoneyTap Credit Line & Personal Loan
 R_MONEYTAP_002,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,product_type,==,personal_loan
 R_MONEYTAP_003,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,secured_flag,==,unsecured
@@ -493,6 +565,10 @@ R_MONEYTAP_023,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,salar
 R_MONEYTAP_024,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,cash_salary_accepted,==,false
 R_MONEYTAP_025,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,min_cibil_score,>=,650
 R_MONEYTAP_026,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_MONEYTAP_027,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,max_dpd_last_12m,<=,30
+R_MONEYTAP_028,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,hard_enquiries_last_30d,<=,6
+R_MONEYTAP_029,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,active_overdue_inr,==,0
+R_MONEYTAP_030,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,written_off_accounts_allowed,==,0
 R_KREDITBEE_001,KreditBee,KreditBee Personal Loan for Salaried,product,product_name,==,KreditBee Personal Loan for Salaried
 R_KREDITBEE_002,KreditBee,KreditBee Personal Loan for Salaried,product,product_type,==,personal_loan
 R_KREDITBEE_003,KreditBee,KreditBee Personal Loan for Salaried,product,secured_flag,==,unsecured
@@ -519,3 +595,7 @@ R_KREDITBEE_023,KreditBee,KreditBee Personal Loan for Salaried,income,salary_cre
 R_KREDITBEE_024,KreditBee,KreditBee Personal Loan for Salaried,income,cash_salary_accepted,==,false
 R_KREDITBEE_025,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,min_cibil_score,>=,600
 R_KREDITBEE_026,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,allow_ntc_thin_file,==,true
+R_KREDITBEE_027,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,max_dpd_last_12m,<=,90
+R_KREDITBEE_028,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,hard_enquiries_last_30d,<=,8
+R_KREDITBEE_029,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,active_overdue_inr,==,0
+R_KREDITBEE_030,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,written_off_accounts_allowed,==,0

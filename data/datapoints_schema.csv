@@ -10,3 +10,7 @@ city_tier,string,Tier,Applicant/Document,Operational location of borrower: 'metr
 cibil_score,integer,Score (300-900),Bureau,Credit bureau CIR score; -1 indicates New-to-Credit / Thin File
 existing_monthly_emis,float,INR,Bureau/Applicant,Sum of active running loan monthly installments
 credit_card_outstanding,float,INR,Bureau,Total credit card balances (5% standard load factor applied to monthly liabilities)
+max_dpd_last_12m,integer,Days,Bureau,Maximum Days Past Due delinquency recorded across all facilities in last 12 months
+hard_enquiries_last_30d,integer,Count,Bureau,Count of commercial credit bureau inquiries in last 30 days (credit hunger velocity)
+active_overdue_inr,float,INR,Bureau,Total unresolved overdue amount across active credit accounts (must be zero)
+written_off_accounts_count,integer,Count,Bureau,Total count of settled or written-off accounts in credit bureau report

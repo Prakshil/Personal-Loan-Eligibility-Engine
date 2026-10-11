@@ -281,6 +281,10 @@ def load_applicant_profiles(filepath: str) -> List[Dict[str, Any]]:
                 "existing_monthly_emis": float(row.get("existing_monthly_emis", 0.0)),
                 "credit_card_outstanding": float(row.get("credit_card_outstanding", 0.0)),
                 "cibil_score": int(row.get("cibil_score", -1)),
+                "max_dpd_last_12m": int(row.get("max_dpd_last_12m", 0)),
+                "hard_enquiries_last_30d": int(row.get("hard_enquiries_last_30d", 0)),
+                "active_overdue_inr": float(row.get("active_overdue_inr", 0.0)),
+                "written_off_accounts_count": int(row.get("written_off_accounts_count", 0)),
                 "city_tier": row.get("city_tier", "Metro"),
                 "desired_loan_amount": desired_loan,
                 "desired_tenure_months": desired_tenure
@@ -532,7 +536,36 @@ def evaluate_lender_knockouts(
             f"{get_rule_prefix('min_cibil_score')}CIBIL score {cibil} is below minimum bureau threshold of {min_cibil}."
         )
 
-    # 8. Dynamic FOIR Sizing Feasibility
+    # 8. CIR & DPD Bureau Delinquency and Credit Hunger Checks
+    applicant_dpd = int(applicant.get("max_dpd_last_12m", 0))
+    if "max_dpd_last_12m" in rules_map:
+        allowed_dpd = int(rules_map["max_dpd_last_12m"]["rule_value"])
+        if applicant_dpd > allowed_dpd:
+            reasons.append(
+                f"{get_rule_prefix('max_dpd_last_12m')}Bureau delinquency ({applicant_dpd} DPD in last 12m) exceeds maximum tolerance of {allowed_dpd} DPD."
+            )
+
+    applicant_enq = int(applicant.get("hard_enquiries_last_30d", 0))
+    if "hard_enquiries_last_30d" in rules_map:
+        max_enq = int(rules_map["hard_enquiries_last_30d"]["rule_value"])
+        if applicant_enq > max_enq:
+            reasons.append(
+                f"{get_rule_prefix('hard_enquiries_last_30d')}High credit enquiry velocity ({applicant_enq} inquiries in 30d) exceeds maximum limit of {max_enq}."
+            )
+
+    active_overdue = float(applicant.get("active_overdue_inr", 0.0))
+    if active_overdue > 0:
+        reasons.append(
+            f"{get_rule_prefix('active_overdue_inr')}Active overdue debt balance of ₹{active_overdue:,.0f} detected in bureau CIR (Zero overdue balance mandatory)."
+        )
+
+    written_off = int(applicant.get("written_off_accounts_count", 0))
+    if written_off > 0:
+        reasons.append(
+            f"{get_rule_prefix('written_off_accounts_allowed')}Unsettled or written-off accounts ({written_off} found) detected in credit bureau report."
+        )
+
+    # 9. Dynamic FOIR Sizing Feasibility
     applicable_foir = resolve_dynamic_foir(lender, monthly_income)
     available_emi = calculate_max_allowed_emi(monthly_income, applicable_foir, effective_emis)
     if available_emi <= 0:

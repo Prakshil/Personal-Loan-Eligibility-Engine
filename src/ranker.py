@@ -122,7 +122,13 @@ def format_underwriting_report(
         lines.append(f"  Monthly Debt Load : ₹{base_emis + cc_load:,.0f} (EMIs: ₹{base_emis:,.0f} + 5% of Card Balance ₹{cc_outstanding:,.0f})")
     else:
         lines.append(f"  Existing EMIs     : ₹{base_emis:,.0f}")
-    lines.append(f"  Credit Bureau     : CIBIL {cibil_display}")
+    dpd = applicant.get("max_dpd_last_12m", 0)
+    enquiries = applicant.get("hard_enquiries_last_30d", 0)
+    overdue = float(applicant.get("active_overdue_inr", 0.0))
+    bureau_line = f"CIBIL {cibil_display} | DPD: {dpd} in 12m | Inquiries: {enquiries} in 30d"
+    if overdue > 0:
+        bureau_line += f" | Overdue: ₹{overdue:,.0f}"
+    lines.append(f"  Credit Bureau CIR : {bureau_line}")
     lines.append(f"  Work Experience   : {tot_exp} mos total | {cur_exp} mos current")
     lines.append(f"  Location          : {applicant.get('city_tier', 'Metro')}")
     if applicant.get("desired_loan_amount"):
