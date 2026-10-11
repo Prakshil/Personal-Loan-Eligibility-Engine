@@ -28,6 +28,7 @@ if sys.platform == "win32":
 
 from src.rule_engine import load_lender_rules, load_applicant_profiles, underwrite_applicant_all_lenders
 from src.ranker import get_recommendation_summary, format_underwriting_report
+from src.prescription_engine import generate_what_if_prescriptions, format_prescriptions_report
 
 
 DEFAULT_LENDERS_PATH = os.path.join("data", "lender_rules_matrix.csv")
@@ -61,14 +62,19 @@ def run_single_profile(
     """
     evaluations = underwrite_applicant_all_lenders(applicant, lenders)
     decision = get_recommendation_summary(evaluations)
+    prescriptions = generate_what_if_prescriptions(applicant, lenders, decision)
 
     if verbose:
         report_str = format_underwriting_report(applicant, decision)
         print(report_str)
+        if prescriptions:
+            presc_str = format_prescriptions_report(prescriptions)
+            print(presc_str)
 
     return {
         "applicant": applicant,
-        "decision": decision
+        "decision": decision,
+        "prescriptions": prescriptions
     }
 
 
@@ -113,6 +119,8 @@ def export_test_results_to_csv(all_results: List[Dict[str, Any]], csv_path: str)
             "best_total_cost_of_credit": fin.get("total_cost_of_credit", 0.0),
             "best_foreclosure_penalty": fin.get("foreclosure_penalty", ""),
             "best_unlisted_rules_method": fin.get("unlisted_rules_method_summary", ""),
+            "top_what_if_action": (res.get("prescriptions", [{}])[0].get("action") if res.get("prescriptions") else "None required"),
+            "what_if_impact": (res.get("prescriptions", [{}])[0].get("impact") if res.get("prescriptions") else "Optimal"),
             "best_source_url": fin.get("source", "")
         }
         rows.append(row)

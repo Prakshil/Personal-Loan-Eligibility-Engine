@@ -49,6 +49,15 @@ This repository implements a **4-stage Underwriting Waterfall**:
 │  - Multi-Criteria Sorting (APR > Cost)    │
 │  - Designate #1 "Best Recommended Option" │
 │  - Generate Granular Audit Trails         │
+└─────────────────────┬─────────────────────┘
+                      │
+                      ▼
+┌───────────────────────────────────────────┐
+│  Stage 5: What-If Prescription Engine     │
+│  - De-leveraging Sensitivity Simulation   │
+│  - CIBIL Elevation Target Milestones      │
+│  - Employer Tenure Horizon Analysis       │
+│  - Actionable Borrower Roadmap Generation │
 └───────────────────────────────────────────┘
 ```
 
@@ -157,7 +166,8 @@ personal-loan-eligibility-model/
 │   ├── __init__.py                # Package initialization
 │   ├── loan_calculator.py         # Financial math (FOIR, Annuity, EMI, Multipliers)
 │   ├── rule_engine.py             # Hybrid waterfall engine: atomic knockouts & sizing
-│   └── ranker.py                  # Multi-criteria optimization, audit trail & report generator
+│   ├── ranker.py                  # Multi-criteria optimization, audit trail & report generator
+│   └── prescription_engine.py     # What-If counterfactual sensitivity & prescription engine
 ├── output/
 │   └── test_results.csv           # Tabular underwriting evaluation summary (CSV)
 ├── main.py                        # Production CLI runner & interactive terminal wizard
