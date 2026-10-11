@@ -153,6 +153,10 @@ def format_underwriting_report(
         lines.append(f"  Processing Fee           : ₹{fin['processing_fee_inr']:,.0f} ({fin['processing_fee_pct']}%)")
         lines.append(f"  Total Cost of Credit     : ₹{fin['total_cost_of_credit']:,.0f}")
         lines.append(f"  Max Possible Capacity    : ₹{fin['max_capacity_inr']:,.0f}")
+        if fin.get("foreclosure_penalty"):
+            lines.append(f"  Foreclosure Terms        : {fin['foreclosure_penalty']}")
+        if fin.get("unlisted_rules_method_summary"):
+            lines.append(f"  Unlisted Rules Policy    : {fin['unlisted_rules_method_summary']}")
         lines.append(f"  Source Verification      : {fin['source']} (as of {fin['accessed_date']})")
     else:
         lines.append("\n" + "!" * 80)

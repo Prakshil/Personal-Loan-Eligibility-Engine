@@ -143,19 +143,21 @@ The engine includes 20 institutional lenders across three standard risk and oper
 
 ---
 
-## 6. Directory Structure (Pure CSV Architecture)
+## 6. Directory Structure (Hybrid Enterprise CSV Architecture)
 
 ```
 personal-loan-eligibility-model/
 ├── data/
+│   ├── knockout_rules.csv         # 520 atomic underwriting knockout rules (rule_id audit matrix)
+│   ├── lender_rules_matrix.csv    # 20 lenders: 24 columns, rates, limits, unlisted methods, URLs
 │   ├── datapoints_schema.csv      # Underwriting data dictionary, types, and sources
-│   ├── lender_rules.csv           # 20 lenders: policies, slabs, multipliers, real URLs
+│   ├── lender_rules.csv           # Policy tables, slabs, and multipliers
 │   └── test_profiles.csv          # 10 benchmark edge-case borrower profiles (CSV)
 ├── src/
 │   ├── __init__.py                # Package initialization
 │   ├── loan_calculator.py         # Financial math (FOIR, Annuity, EMI, Multipliers)
-│   ├── rule_engine.py             # Multi-stage knockout waterfall & pure CSV parser
-│   └── ranker.py                  # Multi-criteria optimization & best-offer selector
+│   ├── rule_engine.py             # Hybrid waterfall engine: atomic knockouts & sizing
+│   └── ranker.py                  # Multi-criteria optimization, audit trail & report generator
 ├── output/
 │   └── test_results.csv           # Tabular underwriting evaluation summary (CSV)
 ├── main.py                        # Production CLI runner & interactive terminal wizard

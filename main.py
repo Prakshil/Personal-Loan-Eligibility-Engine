@@ -30,7 +30,8 @@ from src.rule_engine import load_lender_rules, load_applicant_profiles, underwri
 from src.ranker import get_recommendation_summary, format_underwriting_report
 
 
-DEFAULT_LENDERS_PATH = os.path.join("data", "lender_rules.csv")
+DEFAULT_LENDERS_PATH = os.path.join("data", "lender_rules_matrix.csv")
+DEFAULT_KNOCKOUT_PATH = os.path.join("data", "knockout_rules.csv")
 DEFAULT_PROFILES_PATH = os.path.join("data", "test_profiles.csv")
 DEFAULT_OUTPUT_DIR = "output"
 DEFAULT_OUTPUT_CSV = os.path.join(DEFAULT_OUTPUT_DIR, "test_results.csv")
@@ -110,6 +111,8 @@ def export_test_results_to_csv(all_results: List[Dict[str, Any]], csv_path: str)
             "best_total_interest": fin.get("total_interest", 0.0),
             "best_processing_fee_inr": fin.get("processing_fee_inr", 0.0),
             "best_total_cost_of_credit": fin.get("total_cost_of_credit", 0.0),
+            "best_foreclosure_penalty": fin.get("foreclosure_penalty", ""),
+            "best_unlisted_rules_method": fin.get("unlisted_rules_method_summary", ""),
             "best_source_url": fin.get("source", "")
         }
         rows.append(row)
