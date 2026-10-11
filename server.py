@@ -199,14 +199,15 @@ class UnderwritingRequestHandler(BaseHTTPRequestHandler):
         }
 
 
-def run_server(port: int = PORT):
+def run_server(port: int = PORT, host: str = "0.0.0.0"):
     """Start local underwriting HTTP server."""
-    server_address = ("127.0.0.1", port)
+    server_address = (host, port)
     httpd = HTTPServer(server_address, UnderwritingRequestHandler)
     print("=" * 70)
-    print(f"⚡ Personal Loan Underwriting Web Dashboard Live")
-    print(f"👉 Local URL : http://localhost:{port}")
-    print(f"📋 Loaded    : {len(LENDERS)} Lenders | {len(PROFILES)} Test Profiles")
+    print(f"⚡ PLE-Birbal Underwriting Web Dashboard Live")
+    print(f"👉 Local URL   : http://localhost:{port}")
+    print(f"👉 Network URL : http://{host}:{port}")
+    print(f"📋 Loaded      : {len(LENDERS)} Lenders | {len(PROFILES)} Test Profiles")
     print("=" * 70)
     try:
         httpd.serve_forever()
@@ -216,10 +217,12 @@ def run_server(port: int = PORT):
 
 
 if __name__ == "__main__":
-    port_to_use = PORT
+    # Prioritize command line arg, then PORT env var (used by Docker/Cloud), then default 5050
+    port_to_use = int(os.environ.get("PORT", PORT))
     if len(sys.argv) > 1:
         try:
             port_to_use = int(sys.argv[1])
         except ValueError:
             pass
-    run_server(port_to_use)
+    host_to_use = os.environ.get("HOST", "0.0.0.0")
+    run_server(port=port_to_use, host=host_to_use)
