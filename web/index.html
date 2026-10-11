@@ -15,10 +15,10 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23ffffff'>✦</text></svg>">
 </head>
 <body>
-  <!-- Ambient Background Vignette -->
+  <!-- Ambient Subtle Background Vignette -->
   <div class="bg-vignette" aria-hidden="true"></div>
 
-  <!-- Header / Navigation Bar -->
+  <!-- Header / Navigation -->
   <header class="app-header">
     <div class="header-container">
       <div class="brand-group">
@@ -32,471 +32,378 @@
       <div class="header-meta">
         <div class="status-chip" id="engine-status">
           <span class="status-dot"></span>
-          <span class="status-text">20 TOP BANKS & LENDERS READY</span>
+          <span class="status-text">20 TOP BANKS & NBFCs ACTIVE</span>
         </div>
-        <span class="specimen-label">INSTANT · NO HIDDEN ML · PURE RULES</span>
+        <span class="specimen-label">INSTANT · NO HIDDEN ML · TRANSPARENT RULES</span>
       </div>
     </div>
   </header>
 
-  <!-- Notification Banner (Non-intrusive, zero alerts) -->
+  <!-- Non-intrusive status banner -->
   <div id="status-banner" class="status-banner" style="display: none;"></div>
 
-  <!-- Main Application Layout with Sidebar -->
-  <div class="app-layout">
-    
-    <!-- LEFT SIDEBAR: Sample Test Profiles -->
-    <aside class="sidebar-profiles">
-      <div class="sidebar-header">
-        <div class="sidebar-title-row">
-          <span class="sidebar-icon">📋</span>
-          <h2 class="sidebar-title">Sample Profiles</h2>
+  <main class="main-shell">
+    <!-- Hero / Headline Section -->
+    <section class="hero-strip">
+      <div class="hero-eyebrow">PERSONAL LOAN COMPARISON & ELIGIBILITY</div>
+      <h1 class="hero-title">
+        Find your best personal loan offer across <em class="serif-italic">20 top Indian banks.</em>
+      </h1>
+      <p class="hero-lede">
+        Evaluate your profile across leading banks and NBFCs in real-time. Computes your maximum loan capacity, lowest monthly EMI, and provides practical advice to qualify for lower interest rates.
+      </p>
+
+      <!-- Quick Benchmark Presets Bar (Horizontal at top as requested) -->
+      <div class="preset-bar-wrap">
+        <div class="preset-label">CLICK ANY SAMPLE PROFILE TO TEST INSTANTLY:</div>
+        <div class="preset-chips" id="preset-container">
+          <button type="button" class="preset-chip active" data-id="PROFILE_01">PROFILE 01 // High Earner (New to Credit)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_02">PROFILE 02 // Over-Leveraged (High Debt)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_03">PROFILE 03 // Late Payments (30 DPD)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_04">PROFILE 04 // Job Hopper (1m)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_05">PROFILE 05 // Age 58 Govt Employee</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_06">PROFILE 06 // Young Graduate (Age 20)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_07">PROFILE 07 // Entry Salary (₹14,000)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_08">PROFILE 08 // Self-Employed</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_09">PROFILE 09 // Top MNC Leader (CIBIL 820)</button>
+          <button type="button" class="preset-chip" data-id="PROFILE_10">PROFILE 10 // Borderline Case</button>
         </div>
-        <p class="sidebar-desc">Click any scenario to see instant loan eligibility results:</p>
       </div>
+    </section>
 
-      <div class="profile-cards-list" id="sidebar-profile-list">
-        <!-- Dynamically populated or static fallback list -->
-        <button type="button" class="profile-card active" data-id="PROFILE_01">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 01</span>
-            <span class="p-tag p-tag-ntc">NEW TO CREDIT</span>
-          </div>
-          <div class="p-name">High Earner, No Credit History</div>
-          <div class="p-meta">₹1,50,000/mo · CIBIL -1</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_02">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 02</span>
-            <span class="p-tag p-tag-warn">HIGH DEBT</span>
-          </div>
-          <div class="p-name">Over-Leveraged (High EMIs & Cards)</div>
-          <div class="p-meta">₹1,20,000/mo · ₹75k Existing Debt</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_03">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 03</span>
-            <span class="p-tag p-tag-block">LATE PAYMENTS</span>
-          </div>
-          <div class="p-name">Credit Impaired (30 Days Past Due)</div>
-          <div class="p-meta">₹45,000/mo · CIBIL 610 · 30 DPD</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_04">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 04</span>
-            <span class="p-tag p-tag-warn">JOB HOPPER</span>
-          </div>
-          <div class="p-name">New at Current Company (1 Month)</div>
-          <div class="p-meta">₹40,000/mo · 1m Current Job</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_05">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 05</span>
-            <span class="p-tag">NEAR RETIREMENT</span>
-          </div>
-          <div class="p-name">Age 58 Govt Employee</div>
-          <div class="p-meta">Age 58 · 24 Months Left to 60</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_06">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 06</span>
-            <span class="p-tag p-tag-block">UNDER-AGE</span>
-          </div>
-          <div class="p-name">Young Graduate (Age 20)</div>
-          <div class="p-meta">Age 20 · Below Min Age 21</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_07">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 07</span>
-            <span class="p-tag">LOW SALARY</span>
-          </div>
-          <div class="p-name">Entry Salary Worker</div>
-          <div class="p-meta">₹14,000/mo Metro</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_08">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 08</span>
-            <span class="p-tag">BUSINESS</span>
-          </div>
-          <div class="p-name">Self-Employed Consultant</div>
-          <div class="p-meta">₹90,000/mo Non-Salaried</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_09">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 09</span>
-            <span class="p-tag p-tag-pass">PRIME MNC</span>
-          </div>
-          <div class="p-name">Top MNC Corporate Leader</div>
-          <div class="p-meta">₹2,00,000/mo · CIBIL 820 · Zero Debt</div>
-        </button>
-
-        <button type="button" class="profile-card" data-id="PROFILE_10">
-          <div class="p-card-top">
-            <span class="p-id">PROFILE 10</span>
-            <span class="p-tag">BORDERLINE</span>
-          </div>
-          <div class="p-name">Exact Policy Boundary Case</div>
-          <div class="p-meta">Age 21 · ₹25k Salary · CIBIL 700</div>
-        </button>
-      </div>
-    </aside>
-
-    <!-- MAIN CONTENT AREA: Form (Left) & Results (Right) -->
-    <main class="main-content">
+    <!-- Core 2-Column Workspace Grid -->
+    <div class="workspace-grid">
       
-      <!-- Top Title & Subtitle Banner -->
-      <section class="page-intro">
-        <h1 class="page-title">
-          Find your best personal loan offer across <em class="serif-italic">20 top Indian banks.</em>
-        </h1>
-        <p class="page-sub">
-          Choose a sample scenario on the left or enter custom details below. Get instant eligible loan amounts, lowest monthly EMIs, and clear reasons if you were rejected.
-        </p>
-      </section>
+      <!-- LEFT COLUMN: Borrower Details Form -->
+      <aside class="workspace-column column-form">
+        <div class="glass-card form-card">
+          <div class="card-header">
+            <div>
+              <span class="card-eyebrow">STEP 1</span>
+              <h2 class="card-title">Borrower Details</h2>
+            </div>
+            <button type="button" id="btn-reset-form" class="btn-ghost-sm">Reset</button>
+          </div>
 
-      <!-- Interactive 2-Column Grid -->
-      <div class="workspace-grid">
+          <form id="underwriting-form" class="borrower-form">
+            <input type="hidden" id="applicant_id" value="PROFILE_01">
+
+            <!-- Section 1: Demographics -->
+            <div class="form-section">
+              <div class="form-section-title">01 / Personal Information</div>
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="name" class="field-label">Full Name</label>
+                  <input type="text" id="name" class="field-input" value="High Earner (New to Credit)" required>
+                </div>
+                <div class="form-field">
+                  <label for="age" class="field-label">Age (Years)</label>
+                  <input type="number" id="age" class="field-input font-mono" value="28" min="18" max="75" required>
+                  <span class="field-hint">Bank limits: 21 to 58/60</span>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="city_tier" class="field-label">City Classification</label>
+                  <select id="city_tier" class="field-select">
+                    <option value="Metro" selected>Metro City (Delhi, Mumbai, Bengaluru, etc.)</option>
+                    <option value="Non-Metro">Non-Metro / Other Cities</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="employment_type" class="field-label">Employment Type</label>
+                  <select id="employment_type" class="field-select">
+                    <option value="Salaried" selected>Salaried (Monthly Payslip)</option>
+                    <option value="Self-Employed">Self-Employed / Business</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: Income & Experience -->
+            <div class="form-section">
+              <div class="form-section-title">02 / Monthly Income & Experience</div>
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="monthly_net_income" class="field-label">Monthly Take-Home Salary (₹)</label>
+                  <input type="number" id="monthly_net_income" class="field-input font-mono" value="150000" min="5000" step="1000" required>
+                  <span class="field-hint">Amount credited into bank account</span>
+                </div>
+                <div class="form-field">
+                  <label for="employer_category" class="field-label">Company Category</label>
+                  <select id="employer_category" class="field-select">
+                    <option value="CAT_A" selected>Top MNC / Listed Company (CAT A)</option>
+                    <option value="GOVERNMENT">Government / PSU Employee</option>
+                    <option value="CAT_B">Mid-Sized Company (CAT B)</option>
+                    <option value="CAT_C">Small Firm / Unlisted (CAT C)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="total_work_exp_months" class="field-label">Total Work Exp. (Months)</label>
+                  <input type="number" id="total_work_exp_months" class="field-input font-mono" value="36" min="0" required>
+                  <span class="field-hint">Banks look for 12 to 24 months</span>
+                </div>
+                <div class="form-field">
+                  <label for="current_job_tenure_months" class="field-label">Time at Current Company (Months)</label>
+                  <input type="number" id="current_job_tenure_months" class="field-input font-mono" value="18" min="0" required>
+                  <span class="field-hint">Govt & PSU banks look for 12 months</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Existing Debt -->
+            <div class="form-section">
+              <div class="form-section-title">03 / Existing Loans & Credit Cards</div>
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="existing_monthly_emis" class="field-label">Total Running EMIs (₹/mo)</label>
+                  <input type="number" id="existing_monthly_emis" class="field-input font-mono" value="0" min="0" step="500" required>
+                  <span class="field-hint">Sum of active loan payments</span>
+                </div>
+                <div class="form-field">
+                  <label for="credit_card_outstanding" class="field-label">Credit Card Outstanding Balance (₹)</label>
+                  <input type="number" id="credit_card_outstanding" class="field-input font-mono" value="0" min="0" step="1000" required>
+                  <span class="field-hint">5% counts towards monthly obligations</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 4: Credit Score & History -->
+            <div class="form-section">
+              <div class="form-section-title">04 / Credit Score & Payment History</div>
+              <div class="form-grid-3">
+                <div class="form-field">
+                  <label for="cibil_score" class="field-label">CIBIL Score</label>
+                  <input type="number" id="cibil_score" class="field-input font-mono" value="-1" min="-1" max="900" required>
+                  <span class="field-hint">-1 = New to Credit</span>
+                </div>
+                <div class="form-field">
+                  <label for="max_dpd_last_12m" class="field-label">Late Payment Days</label>
+                  <input type="number" id="max_dpd_last_12m" class="field-input font-mono" value="0" min="0" max="360" required>
+                  <span class="field-hint">0 = Always paid on time</span>
+                </div>
+                <div class="form-field">
+                  <label for="hard_enquiries_last_30d" class="field-label">Recent Inquiries</label>
+                  <input type="number" id="hard_enquiries_last_30d" class="field-input font-mono" value="1" min="0" max="50" required>
+                  <span class="field-hint">Last 30 days applications</span>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="active_overdue_inr" class="field-label">Overdue / Default Amount (₹)</label>
+                  <input type="number" id="active_overdue_inr" class="field-input font-mono" value="0" min="0" required>
+                  <span class="field-hint">Must be 0 to get approved</span>
+                </div>
+                <div class="form-field">
+                  <label for="written_off_accounts_count" class="field-label">Settled / Written-Off Loans</label>
+                  <input type="number" id="written_off_accounts_count" class="field-input font-mono" value="0" min="0" required>
+                  <span class="field-hint">Zero tolerance across banks</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 5: Target Loan Request -->
+            <div class="form-section">
+              <div class="form-section-title">05 / Target Loan Request</div>
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="desired_loan_amount" class="field-label">Desired Amount (₹)</label>
+                  <input type="number" id="desired_loan_amount" class="field-input font-mono" value="500000" min="10000" step="10000">
+                  <span class="field-hint">Leave blank or enter target amount</span>
+                </div>
+                <div class="form-field">
+                  <label for="desired_tenure_months" class="field-label">Desired Duration (Months)</label>
+                  <input type="number" id="desired_tenure_months" class="field-input font-mono" value="36" min="6" max="72" step="6">
+                  <span class="field-hint">e.g. 12, 24, 36, 48, 60 months</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="btn-submit" class="btn-primary">
+                <span>Check Loan Offers Now</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN: Results & Bank Offers -->
+      <section class="workspace-column column-results">
         
-        <!-- COLUMN 1: Applicant Details Form -->
-        <section class="form-column">
-          <div class="glass-card form-card">
-            <div class="card-header">
-              <div>
-                <span class="card-eyebrow">STEP 1</span>
-                <h2 class="card-title">Borrower Details</h2>
-              </div>
-              <button type="button" id="btn-reset-form" class="btn-ghost-sm">Reset</button>
+        <!-- Summary Header Box -->
+        <div class="glass-card verdict-summary-card">
+          <div class="verdict-meta-row">
+            <span class="specimen-label" id="summary-timestamp">PLE-BIRBAL RESULTS SUMMARY</span>
+            <span class="verdict-badge" id="verdict-status-badge">EVALUATING...</span>
+          </div>
+
+          <div class="verdict-metrics-grid">
+            <div class="metric-cell">
+              <span class="metric-label">ELIGIBLE BANKS</span>
+              <div class="metric-value font-mono" id="val-approved-count">—</div>
+              <span class="metric-sub" id="val-approved-rate">0% Approval Rate</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-cell">
+              <span class="metric-label">NOT ELIGIBLE</span>
+              <div class="metric-value font-mono text-muted" id="val-rejected-count">—</div>
+              <span class="metric-sub">Failed Bank Rules</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-cell">
+              <span class="metric-label">LOWEST INTEREST RATE</span>
+              <div class="metric-value font-mono text-pass" id="val-best-rate">—</div>
+              <span class="metric-sub" id="val-best-lender">—</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-cell">
+              <span class="metric-label">MAX LOAN CAPACITY</span>
+              <div class="metric-value font-mono" id="val-best-sanction">—</div>
+              <span class="metric-sub" id="val-best-emi">₹0 / Month EMI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rank #1 Best Recommended Loan Spotlight Card -->
+        <div class="glass-card prime-offer-card" id="prime-offer-card">
+          <div class="prime-offer-badge-row">
+            <span class="rank-one-chip">#1 BEST RECOMMENDED BANK</span>
+            <span class="prime-inst-type font-mono" id="prime-inst-type">BANK</span>
+          </div>
+
+          <div class="prime-offer-body">
+            <div class="prime-offer-title-wrap">
+              <h2 class="prime-lender-name" id="prime-lender-name">Analyzing Bank Rules...</h2>
+              <p class="prime-lender-reason text-muted" id="prime-lender-sub">Lowest interest rate, minimal EMI, and lowest total borrowing cost.</p>
             </div>
 
-            <form id="underwriting-form" class="borrower-form">
-              <input type="hidden" id="applicant_id" value="PROFILE_01">
-
-              <!-- Section 1: Demographics -->
-              <div class="form-section">
-                <div class="form-section-title">01 / Personal Information</div>
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="name" class="field-label">Full Name</label>
-                    <input type="text" id="name" class="field-input" value="High Earner (New to Credit)" required>
-                  </div>
-                  <div class="form-field">
-                    <label for="age" class="field-label">Age (Years)</label>
-                    <input type="number" id="age" class="field-input font-mono" value="28" min="18" max="75" required>
-                    <span class="field-hint">Must be 21 to 58/60</span>
-                  </div>
-                </div>
-
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="city_tier" class="field-label">City Type</label>
-                    <select id="city_tier" class="field-select">
-                      <option value="Metro" selected>Metro City (Delhi, Mumbai, Bengaluru, etc.)</option>
-                      <option value="Non-Metro">Non-Metro / Other Cities</option>
-                    </select>
-                  </div>
-                  <div class="form-field">
-                    <label for="employment_type" class="field-label">Employment Type</label>
-                    <select id="employment_type" class="field-select">
-                      <option value="Salaried" selected>Salaried (Monthly Payslip)</option>
-                      <option value="Self-Employed">Self-Employed / Business</option>
-                    </select>
-                  </div>
-                </div>
+            <div class="prime-key-stats-grid">
+              <div class="prime-stat-box">
+                <span class="prime-stat-label">APPROVED AMOUNT</span>
+                <span class="prime-stat-num font-mono" id="prime-sanction">₹0</span>
               </div>
-
-              <!-- Section 2: Income & Company -->
-              <div class="form-section">
-                <div class="form-section-title">02 / Monthly Income & Work Experience</div>
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="monthly_net_income" class="field-label">Monthly Take-Home Salary (₹)</label>
-                    <input type="number" id="monthly_net_income" class="field-input font-mono" value="150000" min="5000" step="1000" required>
-                    <span class="field-hint">Amount credited into bank account</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="employer_category" class="field-label">Company Category</label>
-                    <select id="employer_category" class="field-select">
-                      <option value="CAT_A" selected>Top MNC / Listed Company (CAT A)</option>
-                      <option value="GOVERNMENT">Government / PSU Employee</option>
-                      <option value="CAT_B">Mid-Sized Company (CAT B)</option>
-                      <option value="CAT_C">Small Firm / Unlisted (CAT C)</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="total_work_exp_months" class="field-label">Total Work Experience (Months)</label>
-                    <input type="number" id="total_work_exp_months" class="field-input font-mono" value="36" min="0" required>
-                    <span class="field-hint">Banks look for 12 to 24 months</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="current_job_tenure_months" class="field-label">Time at Current Company (Months)</label>
-                    <input type="number" id="current_job_tenure_months" class="field-input font-mono" value="18" min="0" required>
-                    <span class="field-hint">Govt & PSU banks look for 12 months</span>
-                  </div>
-                </div>
+              <div class="prime-stat-box">
+                <span class="prime-stat-label">INTEREST RATE</span>
+                <span class="prime-stat-num font-mono text-pass" id="prime-rate">0.00%</span>
               </div>
-
-              <!-- Section 3: Existing Loans & Cards -->
-              <div class="form-section">
-                <div class="form-section-title">03 / Existing Loans & Credit Cards</div>
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="existing_monthly_emis" class="field-label">Total Running EMIs (₹/month)</label>
-                    <input type="number" id="existing_monthly_emis" class="field-input font-mono" value="0" min="0" step="500" required>
-                    <span class="field-hint">Sum of all monthly loan payments</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="credit_card_outstanding" class="field-label">Credit Card Outstanding Balance (₹)</label>
-                    <input type="number" id="credit_card_outstanding" class="field-input font-mono" value="0" min="0" step="1000" required>
-                    <span class="field-hint">Banks count 5% of this as monthly burden</span>
-                  </div>
-                </div>
+              <div class="prime-stat-box">
+                <span class="prime-stat-label">MONTHLY EMI</span>
+                <span class="prime-stat-num font-mono" id="prime-emi">₹0</span>
               </div>
-
-              <!-- Section 4: Credit Score & History -->
-              <div class="form-section">
-                <div class="form-section-title">04 / Credit Score & Payment History</div>
-                <div class="form-grid-3">
-                  <div class="form-field">
-                    <label for="cibil_score" class="field-label">CIBIL Score</label>
-                    <input type="number" id="cibil_score" class="field-input font-mono" value="-1" min="-1" max="900" required>
-                    <span class="field-hint">-1 = No history (New to credit)</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="max_dpd_last_12m" class="field-label">Late Payment Days</label>
-                    <input type="number" id="max_dpd_last_12m" class="field-input font-mono" value="0" min="0" max="360" required>
-                    <span class="field-hint">0 = Always paid on time</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="hard_enquiries_last_30d" class="field-label">Recent Loan Inquiries</label>
-                    <input type="number" id="hard_enquiries_last_30d" class="field-input font-mono" value="1" min="0" max="50" required>
-                    <span class="field-hint">Loan applications in last 30 days</span>
-                  </div>
-                </div>
-
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="active_overdue_inr" class="field-label">Overdue / Default Amount (₹)</label>
-                    <input type="number" id="active_overdue_inr" class="field-input font-mono" value="0" min="0" required>
-                    <span class="field-hint">Must be 0 to get approved</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="written_off_accounts_count" class="field-label">Written-Off / Settled Loans</label>
-                    <input type="number" id="written_off_accounts_count" class="field-input font-mono" value="0" min="0" required>
-                    <span class="field-hint">Count of unpaid past settlements</span>
-                  </div>
-                </div>
+              <div class="prime-stat-box">
+                <span class="prime-stat-label">PROCESSING FEE</span>
+                <span class="prime-stat-num font-mono" id="prime-proc-fee">₹0</span>
               </div>
+            </div>
 
-              <!-- Section 5: Desired Loan -->
-              <div class="form-section">
-                <div class="form-section-title">05 / Desired Loan Amount & Duration</div>
-                <div class="form-grid-2">
-                  <div class="form-field">
-                    <label for="desired_loan_amount" class="field-label">Desired Loan (₹)</label>
-                    <input type="number" id="desired_loan_amount" class="field-input font-mono" value="500000" min="10000" step="10000">
-                    <span class="field-hint">Leave blank or enter target amount</span>
-                  </div>
-                  <div class="form-field">
-                    <label for="desired_tenure_months" class="field-label">Desired Duration (Months)</label>
-                    <input type="number" id="desired_tenure_months" class="field-input font-mono" value="36" min="6" max="72" step="6">
-                    <span class="field-hint">e.g. 12, 24, 36, 48, 60 months</span>
-                  </div>
-                </div>
+            <div class="prime-details-row">
+              <div class="prime-detail-item">
+                <span class="detail-k">LOAN DURATION:</span>
+                <span class="detail-v font-mono" id="prime-tenure">0 Months</span>
               </div>
+              <div class="prime-detail-item">
+                <span class="detail-k">TOTAL INTEREST + FEES:</span>
+                <span class="detail-v font-mono" id="prime-total-cost">₹0</span>
+              </div>
+              <div class="prime-detail-item">
+                <span class="detail-k">EARLY REPAYMENT TERMS:</span>
+                <span class="detail-v" id="prime-foreclosure">Standard Terms</span>
+              </div>
+              <div class="prime-detail-item">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="prime-source-link" id="prime-source-link">Visit Official Bank Page ↗</a>
+              </div>
+            </div>
 
-              <div class="form-actions">
-                <button type="submit" id="btn-submit" class="btn-primary">
-                  <span>Check Loan Offers Now</span>
-                  <span class="btn-arrow" aria-hidden="true">→</span>
-                </button>
-              </div>
-            </form>
+            <div class="prime-unlisted-policy" id="prime-policy-note">
+              <strong>Why this is your best option:</strong> <span id="prime-policy-text">—</span>
+            </div>
           </div>
-        </section>
+        </div>
 
-        <!-- COLUMN 2: Results & Bank Offers -->
-        <section class="results-column">
+        <!-- Section: Practical Advice / How to Qualify -->
+        <div class="glass-card prescription-panel" id="prescription-section">
+          <div class="card-header">
+            <div>
+              <span class="card-eyebrow text-pass">ACTION PLAN</span>
+              <h3 class="card-title">How to Unlock Better Loan Offers</h3>
+            </div>
+            <span class="specimen-label">INSTANT ADVICE</span>
+          </div>
+          <p class="section-desc">Practical steps you can take right now to unlock prime banks and reduce your borrowing costs:</p>
           
-          <!-- Summary Header Box -->
-          <div class="glass-card summary-box">
-            <div class="summary-top-row">
-              <span class="specimen-label" id="summary-timestamp">RESULTS SUMMARY</span>
-              <span class="verdict-badge" id="verdict-status-badge">EVALUATING...</span>
-            </div>
+          <div class="prescription-cards-list" id="prescription-list">
+            <!-- Dynamically populated tips -->
+          </div>
+        </div>
 
-            <div class="summary-stats-grid">
-              <div class="stat-item">
-                <span class="stat-lbl">ELIGIBLE BANKS</span>
-                <div class="stat-num font-mono" id="val-approved-count">—</div>
-                <span class="stat-sub" id="val-approved-rate">0% of 20 Banks</span>
-              </div>
-              <div class="stat-sep"></div>
-              <div class="stat-item">
-                <span class="stat-lbl">NOT ELIGIBLE</span>
-                <div class="stat-num font-mono text-muted" id="val-rejected-count">—</div>
-                <span class="stat-sub">Failed Bank Rules</span>
-              </div>
-              <div class="stat-sep"></div>
-              <div class="stat-item">
-                <span class="stat-lbl">LOWEST INTEREST RATE</span>
-                <div class="stat-num font-mono text-pass" id="val-best-rate">—</div>
-                <span class="stat-sub" id="val-best-lender">—</span>
-              </div>
-              <div class="stat-sep"></div>
-              <div class="stat-item">
-                <span class="stat-lbl">MAX LOAN CAPACITY</span>
-                <div class="stat-num font-mono" id="val-best-sanction">—</div>
-                <span class="stat-sub" id="val-best-emi">₹0/mo EMI</span>
-              </div>
+        <!-- Section: Comparison Tables -->
+        <div class="glass-card results-table-card">
+          <div class="table-card-nav">
+            <div class="table-tabs">
+              <button type="button" class="tab-btn active" id="tab-btn-eligible" data-target="tab-eligible">
+                Eligible Banks (<span id="count-tab-eligible">0</span>)
+              </button>
+              <button type="button" class="tab-btn" id="tab-btn-ineligible" data-target="tab-ineligible">
+                Not Eligible (<span id="count-tab-ineligible">0</span>)
+              </button>
+            </div>
+            <div class="specimen-label">SORTED BY LOWEST COST FIRST</div>
+          </div>
+
+          <!-- TAB 1: Eligible Banks Table -->
+          <div class="tab-pane active" id="tab-eligible">
+            <div class="table-scroll-container">
+              <table class="waterfall-table" id="eligible-table">
+                <thead>
+                  <tr>
+                    <th>RANK</th>
+                    <th>BANK / LENDER</th>
+                    <th>TYPE</th>
+                    <th>RATE</th>
+                    <th>MAX LOAN</th>
+                    <th>DURATION</th>
+                    <th>MONTHLY EMI</th>
+                    <th>TOTAL COST</th>
+                    <th>APPLY</th>
+                  </tr>
+                </thead>
+                <tbody id="eligible-tbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
             </div>
           </div>
 
-          <!-- Rank #1 Best Recommended Loan Spotlight Card -->
-          <div class="glass-card best-offer-card" id="prime-offer-card">
-            <div class="best-offer-top">
-              <span class="rank-one-chip">#1 BEST RECOMMENDED BANK</span>
-              <span class="inst-type-badge font-mono" id="prime-inst-type">BANK</span>
-            </div>
-
-            <div class="best-offer-content">
-              <div class="best-title-group">
-                <h2 class="best-bank-name" id="prime-lender-name">Analyzing Bank Rules...</h2>
-                <p class="best-bank-desc" id="prime-lender-sub">Finding the lowest interest rate and maximum loan amount for your profile.</p>
-              </div>
-
-              <div class="best-stats-grid">
-                <div class="best-stat-cell">
-                  <span class="b-lbl">APPROVED AMOUNT</span>
-                  <span class="b-val font-mono" id="prime-sanction">₹0</span>
-                </div>
-                <div class="best-stat-cell">
-                  <span class="b-lbl">INTEREST RATE</span>
-                  <span class="b-val font-mono text-pass" id="prime-rate">0.00%</span>
-                </div>
-                <div class="best-stat-cell">
-                  <span class="b-lbl">MONTHLY EMI</span>
-                  <span class="b-val font-mono" id="prime-emi">₹0</span>
-                </div>
-                <div class="best-stat-cell">
-                  <span class="b-lbl">PROCESSING FEE</span>
-                  <span class="b-val font-mono" id="prime-proc-fee">₹0</span>
-                </div>
-              </div>
-
-              <div class="best-details-list">
-                <div class="b-detail">
-                  <span class="b-k">LOAN DURATION:</span>
-                  <span class="b-v font-mono" id="prime-tenure">0 Months</span>
-                </div>
-                <div class="b-detail">
-                  <span class="b-k">TOTAL INTEREST + FEES:</span>
-                  <span class="b-v font-mono" id="prime-total-cost">₹0</span>
-                </div>
-                <div class="b-detail">
-                  <span class="b-k">EARLY REPAYMENT TERMS:</span>
-                  <span class="b-v" id="prime-foreclosure">Standard Terms</span>
-                </div>
-                <div class="b-detail">
-                  <a href="#" target="_blank" rel="noopener noreferrer" class="bank-link" id="prime-source-link">Visit Official Bank Page ↗</a>
-                </div>
-              </div>
-
-              <div class="policy-explanation" id="prime-policy-note">
-                <strong>Why this is your best option:</strong> <span id="prime-policy-text">—</span>
-              </div>
+          <!-- TAB 2: Ineligible Banks & Reasons Table -->
+          <div class="tab-pane" id="tab-ineligible">
+            <div class="table-scroll-container">
+              <table class="waterfall-table" id="ineligible-table">
+                <thead>
+                  <tr>
+                    <th>BANK / LENDER</th>
+                    <th>TYPE</th>
+                    <th>EXACT REASONS WHY NOT ELIGIBLE</th>
+                  </tr>
+                </thead>
+                <tbody id="ineligible-tbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
             </div>
           </div>
+        </div>
 
-          <!-- Section: How to Qualify / What-If Tips -->
-          <div class="glass-card tips-card" id="prescription-section">
-            <div class="card-header">
-              <div>
-                <span class="card-eyebrow text-pass">ACTION PLAN</span>
-                <h3 class="card-title">How to Unlock Better Loan Offers</h3>
-              </div>
-              <span class="specimen-label">INSTANT ADVICE</span>
-            </div>
-            <p class="section-desc">Practical steps you can take to unlock prime banks and lower your borrowing costs:</p>
-            
-            <div class="tips-list" id="prescription-list">
-              <!-- Dynamically populated tips -->
-            </div>
-          </div>
+      </section>
+    </div>
+  </main>
 
-          <!-- Section: Bank Comparison Table -->
-          <div class="glass-card tables-card">
-            <div class="tab-header-row">
-              <div class="tab-buttons">
-                <button type="button" class="tab-btn active" id="tab-btn-eligible" data-target="tab-eligible">
-                  Eligible Banks (<span id="count-tab-eligible">0</span>)
-                </button>
-                <button type="button" class="tab-btn" id="tab-btn-ineligible" data-target="tab-ineligible">
-                  Not Eligible (<span id="count-tab-ineligible">0</span>)
-                </button>
-              </div>
-              <span class="specimen-label">SORTED BY LOWEST COST FIRST</span>
-            </div>
-
-            <!-- Tab 1: Eligible Banks -->
-            <div class="tab-pane active" id="tab-eligible">
-              <div class="table-wrap">
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th>RANK</th>
-                      <th>BANK / LENDER</th>
-                      <th>CATEGORY</th>
-                      <th>INTEREST RATE</th>
-                      <th>MAX LOAN</th>
-                      <th>DURATION</th>
-                      <th>MONTHLY EMI</th>
-                      <th>TOTAL COST</th>
-                      <th>APPLY</th>
-                    </tr>
-                  </thead>
-                  <tbody id="eligible-tbody">
-                    <!-- Populated dynamically -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Tab 2: Ineligible Banks & Reasons -->
-            <div class="tab-pane" id="tab-ineligible">
-              <div class="table-wrap">
-                <table class="data-table">
-                  <thead>
-                    <tr>
-                      <th>BANK / LENDER</th>
-                      <th>TYPE</th>
-                      <th>EXACT REASONS WHY NOT ELIGIBLE</th>
-                    </tr>
-                  </thead>
-                  <tbody id="ineligible-tbody">
-                    <!-- Populated dynamically -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-        </section>
-      </div>
-    </main>
-  </div>
-
-  <!-- Footer -->
   <footer class="app-footer">
     <div class="footer-container">
       <div class="footer-left">

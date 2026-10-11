@@ -227,7 +227,7 @@ function formatRate(val) {
 
 // DOM Elements
 const form = document.getElementById("underwriting-form");
-const sidebarProfileList = document.getElementById("sidebar-profile-list");
+const presetContainer = document.getElementById("preset-container");
 const btnReset = document.getElementById("btn-reset-form");
 const statusBanner = document.getElementById("status-banner");
 
@@ -301,7 +301,7 @@ async function initProfiles() {
   } catch (err) {
     console.log("Using embedded profile scenarios.");
   }
-  bindSidebarProfiles();
+  bindPresetChips();
   // Auto-populate with Profile 1
   if (activeProfiles.length > 0) {
     populateForm(activeProfiles[0]);
@@ -309,15 +309,15 @@ async function initProfiles() {
   }
 }
 
-// Bind Sidebar Profile Cards
-function bindSidebarProfiles() {
-  const cards = sidebarProfileList.querySelectorAll(".profile-card");
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      cards.forEach(c => c.classList.remove("active"));
-      card.classList.add("active");
+// Bind Top Preset Profile Chips
+function bindPresetChips() {
+  const chips = document.querySelectorAll(".preset-chip");
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
 
-      const profileId = card.getAttribute("data-id");
+      const profileId = chip.getAttribute("data-id");
       const matched = activeProfiles.find(p => p.applicant_id === profileId);
       if (matched) {
         populateForm(matched);
@@ -353,8 +353,7 @@ function populateForm(p) {
 function setupFormHandlers() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    // Clear sidebar selection highlight if user manually submitted custom values
-    sidebarProfileList.querySelectorAll(".profile-card").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".preset-chip").forEach(c => c.classList.remove("active"));
     runUnderwriting();
   });
 
@@ -364,7 +363,7 @@ function setupFormHandlers() {
     document.getElementById("cibil_score").value = "750";
     document.getElementById("monthly_net_income").value = "50000";
     document.getElementById("age").value = "28";
-    sidebarProfileList.querySelectorAll(".profile-card").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".preset-chip").forEach(c => c.classList.remove("active"));
   });
 }
 
