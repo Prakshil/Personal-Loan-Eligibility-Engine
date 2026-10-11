@@ -173,6 +173,11 @@ personal-loan-eligibility-model/
 │   └── prescription_engine.py     # What-If counterfactual sensitivity & prescription engine
 ├── output/
 │   └── test_results.csv           # Tabular underwriting evaluation summary (CSV)
+├── web/                           # Modern Fable-inspired dark fintech web dashboard
+│   ├── index.html                 # Semantic HTML5 dashboard & interactive telemetry form
+│   ├── css/style.css              # Tokens-first vanilla CSS (glassmorphism & dark canvas)
+│   └── js/app.js                  # Client application, preset loader & ranking renderer
+├── server.py                      # Zero-dependency local HTTP server & REST API
 ├── main.py                        # Production CLI runner & interactive terminal wizard
 ├── requirements.txt               # Dependencies (pandas, tabulate)
 └── README.md                      # Architecture documentation & underwriting guide
@@ -199,16 +204,21 @@ pip install -r requirements.txt
 
 ### Execution Commands
 ```bash
-# 1. Run all 10 benchmark test profiles and export to output/test_results.csv
+# 1. Launch the interactive web dashboard (Recommended)
+python server.py
+# Or via main CLI:
+python main.py --serve --port 5050
+
+# 2. Run all 10 benchmark test profiles and export to output/test_results.csv
 python main.py --test-all
 
-# 2. Run a specific test profile
+# 3. Run a specific test profile
 python main.py --profile-id PROFILE_01
 python main.py --profile-id PROFILE_05
 
-# 3. Launch interactive underwriting wizard
+# 4. Launch interactive terminal wizard
 python main.py --interactive
 
-# 4. Underwrite a custom CSV applicant file
+# 5. Underwrite a custom CSV applicant file
 python main.py --profile-file path/to/applicant.csv
 ```

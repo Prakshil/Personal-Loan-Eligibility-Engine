@@ -294,9 +294,24 @@ def main():
         help=f"Path to output CSV destination (default: {DEFAULT_OUTPUT_CSV})."
     )
 
+    parser.add_argument(
+        "--serve",
+        action="store_true",
+        help="Launch the modern local web dashboard and REST underwriting API."
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=5050,
+        help="Port for the web dashboard server (default: 5050)."
+    )
+
     args = parser.parse_args()
 
-    if args.test_all:
+    if args.serve:
+        import server
+        server.run_server(port=args.port)
+    elif args.test_all:
         run_all_test_profiles(
             lenders_path=args.lenders_file,
             profiles_path=args.profiles_file,
