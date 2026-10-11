@@ -2,6 +2,7 @@
 
 A deterministic, production-grade credit underwriting rule engine and loan recommendation system modeled after the Indian retail lending ecosystem (covering 20 Public Sector Banks, Private Sector Banks, NBFCs, and Fintech lenders). Accessible via an interactive modern web dashboard or a robust CLI.
 
+### Live URL: https://personal-loan-eligibility-birbal.onrender.com/
 ---
 
 ## 1. Problem Statement & Architecture
