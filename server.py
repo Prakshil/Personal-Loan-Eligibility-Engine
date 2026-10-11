@@ -1,15 +1,8 @@
 """
-Personal Loan Eligibility Underwriting Engine - Local Web Server
------------------------------------------------------------------
-Lightweight, zero-dependency HTTP server using Python's standard library.
-Serves the modern Fable-styled dark fintech dashboard and exposes the
-deterministic underwriting waterfall engine via REST endpoints.
-
-Endpoints:
-    GET  /                  -> Serves web/index.html
-    GET  /api/profiles      -> Returns 10 benchmark test profiles
-    GET  /api/lenders       -> Returns 20 institutional lenders
-    POST /api/underwrite    -> Executes full waterfall underwriting, ranking & prescriptions
+PLE-Birbal Web Server & REST API
+---------------------------------
+Lightweight HTTP server using Python's standard library.
+Serves the web dashboard and handles underwriting API requests.
 """
 
 import os
