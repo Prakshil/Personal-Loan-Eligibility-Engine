@@ -1,0 +1,12 @@
+variable_name,data_type,unit,source,description
+applicant_id,string,N/A,System,Unique identifier for test profiling and auditing
+age,integer,Years,Applicant/Document,Applicant chronological age verified against KYC documents (Aadhaar/PAN)
+monthly_net_income,float,INR,Document,Net take-home salary verified via bank statements or monthly payslips
+employment_type,string,Category,Applicant/Document,Nature of employment: 'salaried' or 'self_employed'
+employer_category,string,Tier,Document,Employer categorization: 'CAT_A' (MNC/Top Listed), 'CAT_B', 'CAT_C', 'GOVT'
+total_work_exp_months,integer,Months,Document,Aggregate verified professional work experience across all employers
+current_job_tenure_months,integer,Months,Document,Tenure served with current employer post probation
+city_tier,string,Tier,Applicant/Document,Operational location of borrower: 'metro' or 'non_metro'
+cibil_score,integer,Score (300-900),Bureau,Credit bureau CIR score; -1 indicates New-to-Credit / Thin File
+existing_monthly_emis,float,INR,Bureau/Applicant,Sum of active running loan monthly installments
+credit_card_outstanding,float,INR,Bureau,Total credit card balances (5% standard load factor applied to monthly liabilities)
