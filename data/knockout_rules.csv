@@ -1,0 +1,521 @@
+rule_id,lender,product_name,rule_family,rule_name,operator,rule_value
+R_SBI_001,State Bank of India (SBI),Real-Time Xpress Credit,product,product_name,==,Real-Time Xpress Credit
+R_SBI_002,State Bank of India (SBI),Real-Time Xpress Credit,product,product_type,==,personal_loan
+R_SBI_003,State Bank of India (SBI),Real-Time Xpress Credit,product,secured_flag,==,unsecured
+R_SBI_004,State Bank of India (SBI),Real-Time Xpress Credit,product,existing_customer_required,==,true
+R_SBI_005,State Bank of India (SBI),Real-Time Xpress Credit,product,min_loan_amount_inr,>=,25000
+R_SBI_006,State Bank of India (SBI),Real-Time Xpress Credit,product,max_loan_amount_inr,<=,2000000
+R_SBI_007,State Bank of India (SBI),Real-Time Xpress Credit,product,min_tenure_months,>=,12
+R_SBI_008,State Bank of India (SBI),Real-Time Xpress Credit,product,max_tenure_months,<=,72
+R_SBI_009,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,nationality,==,Indian_National
+R_SBI_010,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,resident_status,==,Resident_Indian
+R_SBI_011,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,min_age,>=,21
+R_SBI_012,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,max_age_application,<=,58
+R_SBI_013,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,max_age_maturity,<=,60
+R_SBI_014,State Bank of India (SBI),Real-Time Xpress Credit,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_SBI_015,State Bank of India (SBI),Real-Time Xpress Credit,employment,employment_type_allowed,in,salaried
+R_SBI_016,State Bank of India (SBI),Real-Time Xpress Credit,employment,employer_category_allowed,in,"Central_Govt, State_Govt, Defence, CPSE, Reputed_Corporates"
+R_SBI_017,State Bank of India (SBI),Real-Time Xpress Credit,employment_stability,min_total_work_experience_months,>=,24
+R_SBI_018,State Bank of India (SBI),Real-Time Xpress Credit,employment_stability,min_current_job_tenure_corporate,>=,12
+R_SBI_019,State Bank of India (SBI),Real-Time Xpress Credit,employment_stability,min_current_job_tenure_government,>=,6
+R_SBI_020,State Bank of India (SBI),Real-Time Xpress Credit,income,min_monthly_salary_corporate,>=,25000
+R_SBI_021,State Bank of India (SBI),Real-Time Xpress Credit,income,min_monthly_salary_government,>=,20000
+R_SBI_022,State Bank of India (SBI),Real-Time Xpress Credit,income,min_monthly_salary_non_metro,>=,15000
+R_SBI_023,State Bank of India (SBI),Real-Time Xpress Credit,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_SBI_024,State Bank of India (SBI),Real-Time Xpress Credit,income,cash_salary_accepted,==,false
+R_SBI_025,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,min_cibil_score,>=,650
+R_SBI_026,State Bank of India (SBI),Real-Time Xpress Credit,credit_bureau,allow_ntc_thin_file,==,false
+R_PNB_001,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,product_name,==,PNB Sahyog Personal Loan
+R_PNB_002,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,product_type,==,personal_loan
+R_PNB_003,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,secured_flag,==,unsecured
+R_PNB_004,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,existing_customer_required,==,true
+R_PNB_005,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,min_loan_amount_inr,>=,25000
+R_PNB_006,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,max_loan_amount_inr,<=,2000000
+R_PNB_007,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,min_tenure_months,>=,12
+R_PNB_008,Punjab National Bank (PNB),PNB Sahyog Personal Loan,product,max_tenure_months,<=,60
+R_PNB_009,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,nationality,==,Indian_National
+R_PNB_010,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_PNB_011,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,min_age,>=,21
+R_PNB_012,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,max_age_application,<=,58
+R_PNB_013,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_PNB_014,Punjab National Bank (PNB),PNB Sahyog Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_PNB_015,Punjab National Bank (PNB),PNB Sahyog Personal Loan,employment,employment_type_allowed,in,salaried
+R_PNB_016,Punjab National Bank (PNB),PNB Sahyog Personal Loan,employment,employer_category_allowed,in,"Central_Govt, State_Govt, PSUs, Reputed_Corporates, Educational_Institutions"
+R_PNB_017,Punjab National Bank (PNB),PNB Sahyog Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_PNB_018,Punjab National Bank (PNB),PNB Sahyog Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,12
+R_PNB_019,Punjab National Bank (PNB),PNB Sahyog Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_PNB_020,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_PNB_021,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,min_monthly_salary_government,>=,18000
+R_PNB_022,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_PNB_023,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_PNB_024,Punjab National Bank (PNB),PNB Sahyog Personal Loan,income,cash_salary_accepted,==,false
+R_PNB_025,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,min_cibil_score,>=,680
+R_PNB_026,Punjab National Bank (PNB),PNB Sahyog Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_BOB_001,Bank of Baroda,Baroda Personal Loan,product,product_name,==,Baroda Personal Loan
+R_BOB_002,Bank of Baroda,Baroda Personal Loan,product,product_type,==,personal_loan
+R_BOB_003,Bank of Baroda,Baroda Personal Loan,product,secured_flag,==,unsecured
+R_BOB_004,Bank of Baroda,Baroda Personal Loan,product,existing_customer_required,==,false
+R_BOB_005,Bank of Baroda,Baroda Personal Loan,product,min_loan_amount_inr,>=,50000
+R_BOB_006,Bank of Baroda,Baroda Personal Loan,product,max_loan_amount_inr,<=,2000000
+R_BOB_007,Bank of Baroda,Baroda Personal Loan,product,min_tenure_months,>=,12
+R_BOB_008,Bank of Baroda,Baroda Personal Loan,product,max_tenure_months,<=,60
+R_BOB_009,Bank of Baroda,Baroda Personal Loan,applicant_identity,nationality,==,Indian_National
+R_BOB_010,Bank of Baroda,Baroda Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_BOB_011,Bank of Baroda,Baroda Personal Loan,applicant_identity,min_age,>=,21
+R_BOB_012,Bank of Baroda,Baroda Personal Loan,applicant_identity,max_age_application,<=,58
+R_BOB_013,Bank of Baroda,Baroda Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_BOB_014,Bank of Baroda,Baroda Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_BOB_015,Bank of Baroda,Baroda Personal Loan,employment,employment_type_allowed,in,salaried
+R_BOB_016,Bank of Baroda,Baroda Personal Loan,employment,employer_category_allowed,in,"Central_Govt, State_Govt, PSUs, Joint_Ventures, Listed_Corporates"
+R_BOB_017,Bank of Baroda,Baroda Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_BOB_018,Bank of Baroda,Baroda Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,12
+R_BOB_019,Bank of Baroda,Baroda Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_BOB_020,Bank of Baroda,Baroda Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_BOB_021,Bank of Baroda,Baroda Personal Loan,income,min_monthly_salary_government,>=,18000
+R_BOB_022,Bank of Baroda,Baroda Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_BOB_023,Bank of Baroda,Baroda Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_BOB_024,Bank of Baroda,Baroda Personal Loan,income,cash_salary_accepted,==,false
+R_BOB_025,Bank of Baroda,Baroda Personal Loan,credit_bureau,min_cibil_score,>=,701
+R_BOB_026,Bank of Baroda,Baroda Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_CANARA_001,Canara Bank,Canara Budget Personal Loan,product,product_name,==,Canara Budget Personal Loan
+R_CANARA_002,Canara Bank,Canara Budget Personal Loan,product,product_type,==,personal_loan
+R_CANARA_003,Canara Bank,Canara Budget Personal Loan,product,secured_flag,==,unsecured
+R_CANARA_004,Canara Bank,Canara Budget Personal Loan,product,existing_customer_required,==,true
+R_CANARA_005,Canara Bank,Canara Budget Personal Loan,product,min_loan_amount_inr,>=,25000
+R_CANARA_006,Canara Bank,Canara Budget Personal Loan,product,max_loan_amount_inr,<=,1500000
+R_CANARA_007,Canara Bank,Canara Budget Personal Loan,product,min_tenure_months,>=,12
+R_CANARA_008,Canara Bank,Canara Budget Personal Loan,product,max_tenure_months,<=,60
+R_CANARA_009,Canara Bank,Canara Budget Personal Loan,applicant_identity,nationality,==,Indian_National
+R_CANARA_010,Canara Bank,Canara Budget Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_CANARA_011,Canara Bank,Canara Budget Personal Loan,applicant_identity,min_age,>=,21
+R_CANARA_012,Canara Bank,Canara Budget Personal Loan,applicant_identity,max_age_application,<=,58
+R_CANARA_013,Canara Bank,Canara Budget Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_CANARA_014,Canara Bank,Canara Budget Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_CANARA_015,Canara Bank,Canara Budget Personal Loan,employment,employment_type_allowed,in,salaried
+R_CANARA_016,Canara Bank,Canara Budget Personal Loan,employment,employer_category_allowed,in,"Govt_Offices, Educational_Institutions, Reputed_Firms, Public_Enterprises"
+R_CANARA_017,Canara Bank,Canara Budget Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_CANARA_018,Canara Bank,Canara Budget Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,12
+R_CANARA_019,Canara Bank,Canara Budget Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_CANARA_020,Canara Bank,Canara Budget Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_CANARA_021,Canara Bank,Canara Budget Personal Loan,income,min_monthly_salary_government,>=,18000
+R_CANARA_022,Canara Bank,Canara Budget Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_CANARA_023,Canara Bank,Canara Budget Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_CANARA_024,Canara Bank,Canara Budget Personal Loan,income,cash_salary_accepted,==,false
+R_CANARA_025,Canara Bank,Canara Budget Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_CANARA_026,Canara Bank,Canara Budget Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_HDFC_001,HDFC Bank,HDFC Bank Personal Loan,product,product_name,==,HDFC Bank Personal Loan
+R_HDFC_002,HDFC Bank,HDFC Bank Personal Loan,product,product_type,==,personal_loan
+R_HDFC_003,HDFC Bank,HDFC Bank Personal Loan,product,secured_flag,==,unsecured
+R_HDFC_004,HDFC Bank,HDFC Bank Personal Loan,product,existing_customer_required,==,false
+R_HDFC_005,HDFC Bank,HDFC Bank Personal Loan,product,min_loan_amount_inr,>=,50000
+R_HDFC_006,HDFC Bank,HDFC Bank Personal Loan,product,max_loan_amount_inr,<=,4000000
+R_HDFC_007,HDFC Bank,HDFC Bank Personal Loan,product,min_tenure_months,>=,12
+R_HDFC_008,HDFC Bank,HDFC Bank Personal Loan,product,max_tenure_months,<=,60
+R_HDFC_009,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,nationality,==,Indian_National
+R_HDFC_010,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_HDFC_011,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,min_age,>=,21
+R_HDFC_012,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,max_age_application,<=,58
+R_HDFC_013,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_HDFC_014,HDFC Bank,HDFC Bank Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_HDFC_015,HDFC Bank,HDFC Bank Personal Loan,employment,employment_type_allowed,in,salaried
+R_HDFC_016,HDFC Bank,HDFC Bank Personal Loan,employment,employer_category_allowed,in,"Super_CAT_A, CAT_A, CAT_B, CAT_C, Central_Govt, Defence"
+R_HDFC_017,HDFC Bank,HDFC Bank Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_HDFC_018,HDFC Bank,HDFC Bank Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_HDFC_019,HDFC Bank,HDFC Bank Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_HDFC_020,HDFC Bank,HDFC Bank Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_HDFC_021,HDFC Bank,HDFC Bank Personal Loan,income,min_monthly_salary_government,>=,22000
+R_HDFC_022,HDFC Bank,HDFC Bank Personal Loan,income,min_monthly_salary_non_metro,>=,20000
+R_HDFC_023,HDFC Bank,HDFC Bank Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_HDFC_024,HDFC Bank,HDFC Bank Personal Loan,income,cash_salary_accepted,==,false
+R_HDFC_025,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,min_cibil_score,>=,720
+R_HDFC_026,HDFC Bank,HDFC Bank Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_ICICI_001,ICICI Bank,ICICI Instant Personal Loan,product,product_name,==,ICICI Instant Personal Loan
+R_ICICI_002,ICICI Bank,ICICI Instant Personal Loan,product,product_type,==,personal_loan
+R_ICICI_003,ICICI Bank,ICICI Instant Personal Loan,product,secured_flag,==,unsecured
+R_ICICI_004,ICICI Bank,ICICI Instant Personal Loan,product,existing_customer_required,==,false
+R_ICICI_005,ICICI Bank,ICICI Instant Personal Loan,product,min_loan_amount_inr,>=,50000
+R_ICICI_006,ICICI Bank,ICICI Instant Personal Loan,product,max_loan_amount_inr,<=,5000000
+R_ICICI_007,ICICI Bank,ICICI Instant Personal Loan,product,min_tenure_months,>=,12
+R_ICICI_008,ICICI Bank,ICICI Instant Personal Loan,product,max_tenure_months,<=,72
+R_ICICI_009,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,nationality,==,Indian_National
+R_ICICI_010,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_ICICI_011,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,min_age,>=,21
+R_ICICI_012,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,max_age_application,<=,58
+R_ICICI_013,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_ICICI_014,ICICI Bank,ICICI Instant Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_ICICI_015,ICICI Bank,ICICI Instant Personal Loan,employment,employment_type_allowed,in,salaried
+R_ICICI_016,ICICI Bank,ICICI Instant Personal Loan,employment,employer_category_allowed,in,"Diamond_List, CAT_A, CAT_B, CAT_C, Government_PSU"
+R_ICICI_017,ICICI Bank,ICICI Instant Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_ICICI_018,ICICI Bank,ICICI Instant Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_ICICI_019,ICICI Bank,ICICI Instant Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_ICICI_020,ICICI Bank,ICICI Instant Personal Loan,income,min_monthly_salary_corporate,>=,30000
+R_ICICI_021,ICICI Bank,ICICI Instant Personal Loan,income,min_monthly_salary_government,>=,25000
+R_ICICI_022,ICICI Bank,ICICI Instant Personal Loan,income,min_monthly_salary_non_metro,>=,20000
+R_ICICI_023,ICICI Bank,ICICI Instant Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_ICICI_024,ICICI Bank,ICICI Instant Personal Loan,income,cash_salary_accepted,==,false
+R_ICICI_025,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_ICICI_026,ICICI Bank,ICICI Instant Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_AXIS_001,Axis Bank,Axis 24x7 Personal Loan,product,product_name,==,Axis 24x7 Personal Loan
+R_AXIS_002,Axis Bank,Axis 24x7 Personal Loan,product,product_type,==,personal_loan
+R_AXIS_003,Axis Bank,Axis 24x7 Personal Loan,product,secured_flag,==,unsecured
+R_AXIS_004,Axis Bank,Axis 24x7 Personal Loan,product,existing_customer_required,==,false
+R_AXIS_005,Axis Bank,Axis 24x7 Personal Loan,product,min_loan_amount_inr,>=,50000
+R_AXIS_006,Axis Bank,Axis 24x7 Personal Loan,product,max_loan_amount_inr,<=,4000000
+R_AXIS_007,Axis Bank,Axis 24x7 Personal Loan,product,min_tenure_months,>=,12
+R_AXIS_008,Axis Bank,Axis 24x7 Personal Loan,product,max_tenure_months,<=,60
+R_AXIS_009,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,nationality,==,Indian_National
+R_AXIS_010,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_AXIS_011,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,min_age,>=,21
+R_AXIS_012,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,max_age_application,<=,58
+R_AXIS_013,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_AXIS_014,Axis Bank,Axis 24x7 Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_AXIS_015,Axis Bank,Axis 24x7 Personal Loan,employment,employment_type_allowed,in,salaried
+R_AXIS_016,Axis Bank,Axis 24x7 Personal Loan,employment,employer_category_allowed,in,"Elite_Corporates, CAT_A, CAT_B, Govt_Defence, Registered_Pvt_Ltd"
+R_AXIS_017,Axis Bank,Axis 24x7 Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_AXIS_018,Axis Bank,Axis 24x7 Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_AXIS_019,Axis Bank,Axis 24x7 Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_AXIS_020,Axis Bank,Axis 24x7 Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_AXIS_021,Axis Bank,Axis 24x7 Personal Loan,income,min_monthly_salary_government,>=,22000
+R_AXIS_022,Axis Bank,Axis 24x7 Personal Loan,income,min_monthly_salary_non_metro,>=,18000
+R_AXIS_023,Axis Bank,Axis 24x7 Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_AXIS_024,Axis Bank,Axis 24x7 Personal Loan,income,cash_salary_accepted,==,false
+R_AXIS_025,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_AXIS_026,Axis Bank,Axis 24x7 Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_KOTAK_001,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,product_name,==,Kotak Salaried Personal Loan
+R_KOTAK_002,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,product_type,==,personal_loan
+R_KOTAK_003,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,secured_flag,==,unsecured
+R_KOTAK_004,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,existing_customer_required,==,false
+R_KOTAK_005,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,min_loan_amount_inr,>=,50000
+R_KOTAK_006,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,max_loan_amount_inr,<=,4000000
+R_KOTAK_007,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,min_tenure_months,>=,12
+R_KOTAK_008,Kotak Mahindra Bank,Kotak Salaried Personal Loan,product,max_tenure_months,<=,60
+R_KOTAK_009,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,nationality,==,Indian_National
+R_KOTAK_010,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_KOTAK_011,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,min_age,>=,21
+R_KOTAK_012,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,max_age_application,<=,58
+R_KOTAK_013,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_KOTAK_014,Kotak Mahindra Bank,Kotak Salaried Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_KOTAK_015,Kotak Mahindra Bank,Kotak Salaried Personal Loan,employment,employment_type_allowed,in,salaried
+R_KOTAK_016,Kotak Mahindra Bank,Kotak Salaried Personal Loan,employment,employer_category_allowed,in,"Corporate_CAT_A, CAT_B, Govt_PSU, Top_5000_Companies"
+R_KOTAK_017,Kotak Mahindra Bank,Kotak Salaried Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_KOTAK_018,Kotak Mahindra Bank,Kotak Salaried Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_KOTAK_019,Kotak Mahindra Bank,Kotak Salaried Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_KOTAK_020,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_KOTAK_021,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,min_monthly_salary_government,>=,22000
+R_KOTAK_022,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,min_monthly_salary_non_metro,>=,20000
+R_KOTAK_023,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_KOTAK_024,Kotak Mahindra Bank,Kotak Salaried Personal Loan,income,cash_salary_accepted,==,false
+R_KOTAK_025,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,min_cibil_score,>=,710
+R_KOTAK_026,Kotak Mahindra Bank,Kotak Salaried Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_INDUSIND_001,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,product_name,==,IndusInd Multi-Purpose Personal Loan
+R_INDUSIND_002,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,product_type,==,personal_loan
+R_INDUSIND_003,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,secured_flag,==,unsecured
+R_INDUSIND_004,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,existing_customer_required,==,false
+R_INDUSIND_005,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,min_loan_amount_inr,>=,30000
+R_INDUSIND_006,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,max_loan_amount_inr,<=,3000000
+R_INDUSIND_007,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,min_tenure_months,>=,12
+R_INDUSIND_008,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,product,max_tenure_months,<=,60
+R_INDUSIND_009,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,nationality,==,Indian_National
+R_INDUSIND_010,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_INDUSIND_011,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,min_age,>=,21
+R_INDUSIND_012,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,max_age_application,<=,58
+R_INDUSIND_013,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_INDUSIND_014,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_INDUSIND_015,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,employment,employment_type_allowed,in,salaried
+R_INDUSIND_016,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,employment,employer_category_allowed,in,"CAT_A_Listed, CAT_B_Private, Govt_SemiGovt, MNC"
+R_INDUSIND_017,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_INDUSIND_018,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_INDUSIND_019,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_INDUSIND_020,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_INDUSIND_021,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,min_monthly_salary_government,>=,22000
+R_INDUSIND_022,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,min_monthly_salary_non_metro,>=,18000
+R_INDUSIND_023,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_INDUSIND_024,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,income,cash_salary_accepted,==,false
+R_INDUSIND_025,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_INDUSIND_026,IndusInd Bank,IndusInd Multi-Purpose Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_IDFC_001,IDFC FIRST Bank,FIRST Personal Loan,product,product_name,==,FIRST Personal Loan
+R_IDFC_002,IDFC FIRST Bank,FIRST Personal Loan,product,product_type,==,personal_loan
+R_IDFC_003,IDFC FIRST Bank,FIRST Personal Loan,product,secured_flag,==,unsecured
+R_IDFC_004,IDFC FIRST Bank,FIRST Personal Loan,product,existing_customer_required,==,false
+R_IDFC_005,IDFC FIRST Bank,FIRST Personal Loan,product,min_loan_amount_inr,>=,20000
+R_IDFC_006,IDFC FIRST Bank,FIRST Personal Loan,product,max_loan_amount_inr,<=,2000000
+R_IDFC_007,IDFC FIRST Bank,FIRST Personal Loan,product,min_tenure_months,>=,12
+R_IDFC_008,IDFC FIRST Bank,FIRST Personal Loan,product,max_tenure_months,<=,60
+R_IDFC_009,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,nationality,==,Indian_National
+R_IDFC_010,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_IDFC_011,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,min_age,>=,21
+R_IDFC_012,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,max_age_application,<=,58
+R_IDFC_013,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_IDFC_014,IDFC FIRST Bank,FIRST Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_IDFC_015,IDFC FIRST Bank,FIRST Personal Loan,employment,employment_type_allowed,in,salaried
+R_IDFC_016,IDFC FIRST Bank,FIRST Personal Loan,employment,employer_category_allowed,in,"CAT_A, CAT_B, CAT_C, Govt_Defence, Startups_Funded"
+R_IDFC_017,IDFC FIRST Bank,FIRST Personal Loan,employment_stability,min_total_work_experience_months,>=,18
+R_IDFC_018,IDFC FIRST Bank,FIRST Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_IDFC_019,IDFC FIRST Bank,FIRST Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_IDFC_020,IDFC FIRST Bank,FIRST Personal Loan,income,min_monthly_salary_corporate,>=,20000
+R_IDFC_021,IDFC FIRST Bank,FIRST Personal Loan,income,min_monthly_salary_government,>=,20000
+R_IDFC_022,IDFC FIRST Bank,FIRST Personal Loan,income,min_monthly_salary_non_metro,>=,18000
+R_IDFC_023,IDFC FIRST Bank,FIRST Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_IDFC_024,IDFC FIRST Bank,FIRST Personal Loan,income,cash_salary_accepted,==,false
+R_IDFC_025,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_IDFC_026,IDFC FIRST Bank,FIRST Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_YES_001,Yes Bank,Yes Bank Personal Loan,product,product_name,==,Yes Bank Personal Loan
+R_YES_002,Yes Bank,Yes Bank Personal Loan,product,product_type,==,personal_loan
+R_YES_003,Yes Bank,Yes Bank Personal Loan,product,secured_flag,==,unsecured
+R_YES_004,Yes Bank,Yes Bank Personal Loan,product,existing_customer_required,==,false
+R_YES_005,Yes Bank,Yes Bank Personal Loan,product,min_loan_amount_inr,>=,50000
+R_YES_006,Yes Bank,Yes Bank Personal Loan,product,max_loan_amount_inr,<=,4000000
+R_YES_007,Yes Bank,Yes Bank Personal Loan,product,min_tenure_months,>=,12
+R_YES_008,Yes Bank,Yes Bank Personal Loan,product,max_tenure_months,<=,60
+R_YES_009,Yes Bank,Yes Bank Personal Loan,applicant_identity,nationality,==,Indian_National
+R_YES_010,Yes Bank,Yes Bank Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_YES_011,Yes Bank,Yes Bank Personal Loan,applicant_identity,min_age,>=,21
+R_YES_012,Yes Bank,Yes Bank Personal Loan,applicant_identity,max_age_application,<=,58
+R_YES_013,Yes Bank,Yes Bank Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_YES_014,Yes Bank,Yes Bank Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_YES_015,Yes Bank,Yes Bank Personal Loan,employment,employment_type_allowed,in,salaried
+R_YES_016,Yes Bank,Yes Bank Personal Loan,employment,employer_category_allowed,in,"MNC, Public_Limited, Private_Limited, Central_State_Govt"
+R_YES_017,Yes Bank,Yes Bank Personal Loan,employment_stability,min_total_work_experience_months,>=,24
+R_YES_018,Yes Bank,Yes Bank Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_YES_019,Yes Bank,Yes Bank Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_YES_020,Yes Bank,Yes Bank Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_YES_021,Yes Bank,Yes Bank Personal Loan,income,min_monthly_salary_government,>=,22000
+R_YES_022,Yes Bank,Yes Bank Personal Loan,income,min_monthly_salary_non_metro,>=,18000
+R_YES_023,Yes Bank,Yes Bank Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_YES_024,Yes Bank,Yes Bank Personal Loan,income,cash_salary_accepted,==,false
+R_YES_025,Yes Bank,Yes Bank Personal Loan,credit_bureau,min_cibil_score,>=,700
+R_YES_026,Yes Bank,Yes Bank Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_BAJAJ_001,Bajaj Finance,Bajaj Insta Personal Loan,product,product_name,==,Bajaj Insta Personal Loan
+R_BAJAJ_002,Bajaj Finance,Bajaj Insta Personal Loan,product,product_type,==,personal_loan
+R_BAJAJ_003,Bajaj Finance,Bajaj Insta Personal Loan,product,secured_flag,==,unsecured
+R_BAJAJ_004,Bajaj Finance,Bajaj Insta Personal Loan,product,existing_customer_required,==,false
+R_BAJAJ_005,Bajaj Finance,Bajaj Insta Personal Loan,product,min_loan_amount_inr,>=,30000
+R_BAJAJ_006,Bajaj Finance,Bajaj Insta Personal Loan,product,max_loan_amount_inr,<=,4000000
+R_BAJAJ_007,Bajaj Finance,Bajaj Insta Personal Loan,product,min_tenure_months,>=,12
+R_BAJAJ_008,Bajaj Finance,Bajaj Insta Personal Loan,product,max_tenure_months,<=,96
+R_BAJAJ_009,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,nationality,==,Indian_National
+R_BAJAJ_010,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_BAJAJ_011,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,min_age,>=,21
+R_BAJAJ_012,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,max_age_application,<=,67
+R_BAJAJ_013,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,max_age_maturity,<=,80
+R_BAJAJ_014,Bajaj Finance,Bajaj Insta Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_BAJAJ_015,Bajaj Finance,Bajaj Insta Personal Loan,employment,employment_type_allowed,in,salaried
+R_BAJAJ_016,Bajaj Finance,Bajaj Insta Personal Loan,employment,employer_category_allowed,in,"Public_Limited, Private_Limited, MNC, Govt_PSU, Unlisted_SME"
+R_BAJAJ_017,Bajaj Finance,Bajaj Insta Personal Loan,employment_stability,min_total_work_experience_months,>=,12
+R_BAJAJ_018,Bajaj Finance,Bajaj Insta Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,3
+R_BAJAJ_019,Bajaj Finance,Bajaj Insta Personal Loan,employment_stability,min_current_job_tenure_government,>=,3
+R_BAJAJ_020,Bajaj Finance,Bajaj Insta Personal Loan,income,min_monthly_salary_corporate,>=,25000
+R_BAJAJ_021,Bajaj Finance,Bajaj Insta Personal Loan,income,min_monthly_salary_government,>=,22000
+R_BAJAJ_022,Bajaj Finance,Bajaj Insta Personal Loan,income,min_monthly_salary_non_metro,>=,20000
+R_BAJAJ_023,Bajaj Finance,Bajaj Insta Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_BAJAJ_024,Bajaj Finance,Bajaj Insta Personal Loan,income,cash_salary_accepted,==,false
+R_BAJAJ_025,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,min_cibil_score,>=,685
+R_BAJAJ_026,Bajaj Finance,Bajaj Insta Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_TATA_001,Tata Capital,Tata Capital Personal Loan,product,product_name,==,Tata Capital Personal Loan
+R_TATA_002,Tata Capital,Tata Capital Personal Loan,product,product_type,==,personal_loan
+R_TATA_003,Tata Capital,Tata Capital Personal Loan,product,secured_flag,==,unsecured
+R_TATA_004,Tata Capital,Tata Capital Personal Loan,product,existing_customer_required,==,false
+R_TATA_005,Tata Capital,Tata Capital Personal Loan,product,min_loan_amount_inr,>=,40000
+R_TATA_006,Tata Capital,Tata Capital Personal Loan,product,max_loan_amount_inr,<=,3500000
+R_TATA_007,Tata Capital,Tata Capital Personal Loan,product,min_tenure_months,>=,12
+R_TATA_008,Tata Capital,Tata Capital Personal Loan,product,max_tenure_months,<=,72
+R_TATA_009,Tata Capital,Tata Capital Personal Loan,applicant_identity,nationality,==,Indian_National
+R_TATA_010,Tata Capital,Tata Capital Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_TATA_011,Tata Capital,Tata Capital Personal Loan,applicant_identity,min_age,>=,21
+R_TATA_012,Tata Capital,Tata Capital Personal Loan,applicant_identity,max_age_application,<=,58
+R_TATA_013,Tata Capital,Tata Capital Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_TATA_014,Tata Capital,Tata Capital Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_TATA_015,Tata Capital,Tata Capital Personal Loan,employment,employment_type_allowed,in,salaried
+R_TATA_016,Tata Capital,Tata Capital Personal Loan,employment,employer_category_allowed,in,"CAT_A, CAT_B, CAT_C, Government, Reputed_Institutions"
+R_TATA_017,Tata Capital,Tata Capital Personal Loan,employment_stability,min_total_work_experience_months,>=,12
+R_TATA_018,Tata Capital,Tata Capital Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_TATA_019,Tata Capital,Tata Capital Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_TATA_020,Tata Capital,Tata Capital Personal Loan,income,min_monthly_salary_corporate,>=,20000
+R_TATA_021,Tata Capital,Tata Capital Personal Loan,income,min_monthly_salary_government,>=,18000
+R_TATA_022,Tata Capital,Tata Capital Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_TATA_023,Tata Capital,Tata Capital Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_TATA_024,Tata Capital,Tata Capital Personal Loan,income,cash_salary_accepted,==,false
+R_TATA_025,Tata Capital,Tata Capital Personal Loan,credit_bureau,min_cibil_score,>=,675
+R_TATA_026,Tata Capital,Tata Capital Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_ABFL_001,Aditya Birla Capital,Aditya Birla Personal Loan,product,product_name,==,Aditya Birla Personal Loan
+R_ABFL_002,Aditya Birla Capital,Aditya Birla Personal Loan,product,product_type,==,personal_loan
+R_ABFL_003,Aditya Birla Capital,Aditya Birla Personal Loan,product,secured_flag,==,unsecured
+R_ABFL_004,Aditya Birla Capital,Aditya Birla Personal Loan,product,existing_customer_required,==,false
+R_ABFL_005,Aditya Birla Capital,Aditya Birla Personal Loan,product,min_loan_amount_inr,>=,50000
+R_ABFL_006,Aditya Birla Capital,Aditya Birla Personal Loan,product,max_loan_amount_inr,<=,3000000
+R_ABFL_007,Aditya Birla Capital,Aditya Birla Personal Loan,product,min_tenure_months,>=,12
+R_ABFL_008,Aditya Birla Capital,Aditya Birla Personal Loan,product,max_tenure_months,<=,60
+R_ABFL_009,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,nationality,==,Indian_National
+R_ABFL_010,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_ABFL_011,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,min_age,>=,21
+R_ABFL_012,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,max_age_application,<=,58
+R_ABFL_013,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_ABFL_014,Aditya Birla Capital,Aditya Birla Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_ABFL_015,Aditya Birla Capital,Aditya Birla Personal Loan,employment,employment_type_allowed,in,salaried
+R_ABFL_016,Aditya Birla Capital,Aditya Birla Personal Loan,employment,employer_category_allowed,in,"Public_Ltd, Private_Ltd, Govt_Employees, Registered_Societies"
+R_ABFL_017,Aditya Birla Capital,Aditya Birla Personal Loan,employment_stability,min_total_work_experience_months,>=,12
+R_ABFL_018,Aditya Birla Capital,Aditya Birla Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_ABFL_019,Aditya Birla Capital,Aditya Birla Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_ABFL_020,Aditya Birla Capital,Aditya Birla Personal Loan,income,min_monthly_salary_corporate,>=,20000
+R_ABFL_021,Aditya Birla Capital,Aditya Birla Personal Loan,income,min_monthly_salary_government,>=,18000
+R_ABFL_022,Aditya Birla Capital,Aditya Birla Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_ABFL_023,Aditya Birla Capital,Aditya Birla Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_ABFL_024,Aditya Birla Capital,Aditya Birla Personal Loan,income,cash_salary_accepted,==,false
+R_ABFL_025,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,min_cibil_score,>=,675
+R_ABFL_026,Aditya Birla Capital,Aditya Birla Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_LTFS_001,L&T Finance,L&T Finance Consumer Loan,product,product_name,==,L&T Finance Consumer Loan
+R_LTFS_002,L&T Finance,L&T Finance Consumer Loan,product,product_type,==,personal_loan
+R_LTFS_003,L&T Finance,L&T Finance Consumer Loan,product,secured_flag,==,unsecured
+R_LTFS_004,L&T Finance,L&T Finance Consumer Loan,product,existing_customer_required,==,false
+R_LTFS_005,L&T Finance,L&T Finance Consumer Loan,product,min_loan_amount_inr,>=,50000
+R_LTFS_006,L&T Finance,L&T Finance Consumer Loan,product,max_loan_amount_inr,<=,2500000
+R_LTFS_007,L&T Finance,L&T Finance Consumer Loan,product,min_tenure_months,>=,12
+R_LTFS_008,L&T Finance,L&T Finance Consumer Loan,product,max_tenure_months,<=,60
+R_LTFS_009,L&T Finance,L&T Finance Consumer Loan,applicant_identity,nationality,==,Indian_National
+R_LTFS_010,L&T Finance,L&T Finance Consumer Loan,applicant_identity,resident_status,==,Resident_Indian
+R_LTFS_011,L&T Finance,L&T Finance Consumer Loan,applicant_identity,min_age,>=,21
+R_LTFS_012,L&T Finance,L&T Finance Consumer Loan,applicant_identity,max_age_application,<=,58
+R_LTFS_013,L&T Finance,L&T Finance Consumer Loan,applicant_identity,max_age_maturity,<=,60
+R_LTFS_014,L&T Finance,L&T Finance Consumer Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_LTFS_015,L&T Finance,L&T Finance Consumer Loan,employment,employment_type_allowed,in,salaried
+R_LTFS_016,L&T Finance,L&T Finance Consumer Loan,employment,employer_category_allowed,in,"Tier_1_Corporates, Tier_2_Corporates, Government, PSUs"
+R_LTFS_017,L&T Finance,L&T Finance Consumer Loan,employment_stability,min_total_work_experience_months,>=,12
+R_LTFS_018,L&T Finance,L&T Finance Consumer Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_LTFS_019,L&T Finance,L&T Finance Consumer Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_LTFS_020,L&T Finance,L&T Finance Consumer Loan,income,min_monthly_salary_corporate,>=,18000
+R_LTFS_021,L&T Finance,L&T Finance Consumer Loan,income,min_monthly_salary_government,>=,16000
+R_LTFS_022,L&T Finance,L&T Finance Consumer Loan,income,min_monthly_salary_non_metro,>=,15000
+R_LTFS_023,L&T Finance,L&T Finance Consumer Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_LTFS_024,L&T Finance,L&T Finance Consumer Loan,income,cash_salary_accepted,==,false
+R_LTFS_025,L&T Finance,L&T Finance Consumer Loan,credit_bureau,min_cibil_score,>=,670
+R_LTFS_026,L&T Finance,L&T Finance Consumer Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_POONAWALLA_001,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,product_name,==,Poonawalla Instant Personal Loan
+R_POONAWALLA_002,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,product_type,==,personal_loan
+R_POONAWALLA_003,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,secured_flag,==,unsecured
+R_POONAWALLA_004,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,existing_customer_required,==,false
+R_POONAWALLA_005,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,min_loan_amount_inr,>=,50000
+R_POONAWALLA_006,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,max_loan_amount_inr,<=,3000000
+R_POONAWALLA_007,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,min_tenure_months,>=,12
+R_POONAWALLA_008,Poonawalla Fincorp,Poonawalla Instant Personal Loan,product,max_tenure_months,<=,60
+R_POONAWALLA_009,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,nationality,==,Indian_National
+R_POONAWALLA_010,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_POONAWALLA_011,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,min_age,>=,21
+R_POONAWALLA_012,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,max_age_application,<=,58
+R_POONAWALLA_013,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_POONAWALLA_014,Poonawalla Fincorp,Poonawalla Instant Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_POONAWALLA_015,Poonawalla Fincorp,Poonawalla Instant Personal Loan,employment,employment_type_allowed,in,salaried
+R_POONAWALLA_016,Poonawalla Fincorp,Poonawalla Instant Personal Loan,employment,employer_category_allowed,in,"Public_Limited, Private_Limited, Central_State_Govt, MNC"
+R_POONAWALLA_017,Poonawalla Fincorp,Poonawalla Instant Personal Loan,employment_stability,min_total_work_experience_months,>=,12
+R_POONAWALLA_018,Poonawalla Fincorp,Poonawalla Instant Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,6
+R_POONAWALLA_019,Poonawalla Fincorp,Poonawalla Instant Personal Loan,employment_stability,min_current_job_tenure_government,>=,6
+R_POONAWALLA_020,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,min_monthly_salary_corporate,>=,20000
+R_POONAWALLA_021,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,min_monthly_salary_government,>=,18000
+R_POONAWALLA_022,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_POONAWALLA_023,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_POONAWALLA_024,Poonawalla Fincorp,Poonawalla Instant Personal Loan,income,cash_salary_accepted,==,false
+R_POONAWALLA_025,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,min_cibil_score,>=,670
+R_POONAWALLA_026,Poonawalla Fincorp,Poonawalla Instant Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_PIRAMAL_001,Piramal Finance,Piramal Flexible Personal Loan,product,product_name,==,Piramal Flexible Personal Loan
+R_PIRAMAL_002,Piramal Finance,Piramal Flexible Personal Loan,product,product_type,==,personal_loan
+R_PIRAMAL_003,Piramal Finance,Piramal Flexible Personal Loan,product,secured_flag,==,unsecured
+R_PIRAMAL_004,Piramal Finance,Piramal Flexible Personal Loan,product,existing_customer_required,==,false
+R_PIRAMAL_005,Piramal Finance,Piramal Flexible Personal Loan,product,min_loan_amount_inr,>=,25000
+R_PIRAMAL_006,Piramal Finance,Piramal Flexible Personal Loan,product,max_loan_amount_inr,<=,2000000
+R_PIRAMAL_007,Piramal Finance,Piramal Flexible Personal Loan,product,min_tenure_months,>=,12
+R_PIRAMAL_008,Piramal Finance,Piramal Flexible Personal Loan,product,max_tenure_months,<=,60
+R_PIRAMAL_009,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,nationality,==,Indian_National
+R_PIRAMAL_010,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_PIRAMAL_011,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,min_age,>=,21
+R_PIRAMAL_012,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,max_age_application,<=,60
+R_PIRAMAL_013,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,max_age_maturity,<=,62
+R_PIRAMAL_014,Piramal Finance,Piramal Flexible Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_PIRAMAL_015,Piramal Finance,Piramal Flexible Personal Loan,employment,employment_type_allowed,in,"salaried, self_employed"
+R_PIRAMAL_016,Piramal Finance,Piramal Flexible Personal Loan,employment,employer_category_allowed,in,"Proprietorship, Partnership, Private_Ltd, Public_Ltd, Self_Employed_Consultant"
+R_PIRAMAL_017,Piramal Finance,Piramal Flexible Personal Loan,employment_stability,min_total_work_experience_months,>=,12
+R_PIRAMAL_018,Piramal Finance,Piramal Flexible Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,3
+R_PIRAMAL_019,Piramal Finance,Piramal Flexible Personal Loan,employment_stability,min_current_job_tenure_government,>=,3
+R_PIRAMAL_020,Piramal Finance,Piramal Flexible Personal Loan,income,min_monthly_salary_corporate,>=,15000
+R_PIRAMAL_021,Piramal Finance,Piramal Flexible Personal Loan,income,min_monthly_salary_government,>=,14000
+R_PIRAMAL_022,Piramal Finance,Piramal Flexible Personal Loan,income,min_monthly_salary_non_metro,>=,12000
+R_PIRAMAL_023,Piramal Finance,Piramal Flexible Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_PIRAMAL_024,Piramal Finance,Piramal Flexible Personal Loan,income,cash_salary_accepted,==,false
+R_PIRAMAL_025,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,min_cibil_score,>=,650
+R_PIRAMAL_026,Piramal Finance,Piramal Flexible Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_NAVI_001,Navi,Navi Digital Personal Loan,product,product_name,==,Navi Digital Personal Loan
+R_NAVI_002,Navi,Navi Digital Personal Loan,product,product_type,==,personal_loan
+R_NAVI_003,Navi,Navi Digital Personal Loan,product,secured_flag,==,unsecured
+R_NAVI_004,Navi,Navi Digital Personal Loan,product,existing_customer_required,==,false
+R_NAVI_005,Navi,Navi Digital Personal Loan,product,min_loan_amount_inr,>=,10000
+R_NAVI_006,Navi,Navi Digital Personal Loan,product,max_loan_amount_inr,<=,2000000
+R_NAVI_007,Navi,Navi Digital Personal Loan,product,min_tenure_months,>=,6
+R_NAVI_008,Navi,Navi Digital Personal Loan,product,max_tenure_months,<=,84
+R_NAVI_009,Navi,Navi Digital Personal Loan,applicant_identity,nationality,==,Indian_National
+R_NAVI_010,Navi,Navi Digital Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_NAVI_011,Navi,Navi Digital Personal Loan,applicant_identity,min_age,>=,21
+R_NAVI_012,Navi,Navi Digital Personal Loan,applicant_identity,max_age_application,<=,65
+R_NAVI_013,Navi,Navi Digital Personal Loan,applicant_identity,max_age_maturity,<=,65
+R_NAVI_014,Navi,Navi Digital Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_NAVI_015,Navi,Navi Digital Personal Loan,employment,employment_type_allowed,in,"salaried, self_employed"
+R_NAVI_016,Navi,Navi Digital Personal Loan,employment,employer_category_allowed,in,"All_Salaried_Sectors, Freelancers, Gig_Economy, Self_Employed"
+R_NAVI_017,Navi,Navi Digital Personal Loan,employment_stability,min_total_work_experience_months,>=,6
+R_NAVI_018,Navi,Navi Digital Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,3
+R_NAVI_019,Navi,Navi Digital Personal Loan,employment_stability,min_current_job_tenure_government,>=,3
+R_NAVI_020,Navi,Navi Digital Personal Loan,income,min_monthly_salary_corporate,>=,15000
+R_NAVI_021,Navi,Navi Digital Personal Loan,income,min_monthly_salary_government,>=,15000
+R_NAVI_022,Navi,Navi Digital Personal Loan,income,min_monthly_salary_non_metro,>=,12000
+R_NAVI_023,Navi,Navi Digital Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_NAVI_024,Navi,Navi Digital Personal Loan,income,cash_salary_accepted,==,false
+R_NAVI_025,Navi,Navi Digital Personal Loan,credit_bureau,min_cibil_score,>=,650
+R_NAVI_026,Navi,Navi Digital Personal Loan,credit_bureau,allow_ntc_thin_file,==,true
+R_MONEYTAP_001,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,product_name,==,MoneyTap Credit Line & Personal Loan
+R_MONEYTAP_002,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,product_type,==,personal_loan
+R_MONEYTAP_003,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,secured_flag,==,unsecured
+R_MONEYTAP_004,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,existing_customer_required,==,false
+R_MONEYTAP_005,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,min_loan_amount_inr,>=,10000
+R_MONEYTAP_006,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,max_loan_amount_inr,<=,500000
+R_MONEYTAP_007,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,min_tenure_months,>=,12
+R_MONEYTAP_008,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,product,max_tenure_months,<=,36
+R_MONEYTAP_009,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,nationality,==,Indian_National
+R_MONEYTAP_010,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,resident_status,==,Resident_Indian
+R_MONEYTAP_011,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,min_age,>=,21
+R_MONEYTAP_012,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,max_age_application,<=,58
+R_MONEYTAP_013,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,max_age_maturity,<=,60
+R_MONEYTAP_014,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_MONEYTAP_015,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,employment,employment_type_allowed,in,salaried
+R_MONEYTAP_016,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,employment,employer_category_allowed,in,"Registered_Companies, SMEs, Startups, Govt_Entities"
+R_MONEYTAP_017,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,employment_stability,min_total_work_experience_months,>=,6
+R_MONEYTAP_018,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,employment_stability,min_current_job_tenure_corporate,>=,3
+R_MONEYTAP_019,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,employment_stability,min_current_job_tenure_government,>=,3
+R_MONEYTAP_020,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,min_monthly_salary_corporate,>=,20000
+R_MONEYTAP_021,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,min_monthly_salary_government,>=,18000
+R_MONEYTAP_022,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,min_monthly_salary_non_metro,>=,15000
+R_MONEYTAP_023,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_MONEYTAP_024,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,income,cash_salary_accepted,==,false
+R_MONEYTAP_025,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,min_cibil_score,>=,650
+R_MONEYTAP_026,MoneyTap / Freo,MoneyTap Credit Line & Personal Loan,credit_bureau,allow_ntc_thin_file,==,false
+R_KREDITBEE_001,KreditBee,KreditBee Personal Loan for Salaried,product,product_name,==,KreditBee Personal Loan for Salaried
+R_KREDITBEE_002,KreditBee,KreditBee Personal Loan for Salaried,product,product_type,==,personal_loan
+R_KREDITBEE_003,KreditBee,KreditBee Personal Loan for Salaried,product,secured_flag,==,unsecured
+R_KREDITBEE_004,KreditBee,KreditBee Personal Loan for Salaried,product,existing_customer_required,==,false
+R_KREDITBEE_005,KreditBee,KreditBee Personal Loan for Salaried,product,min_loan_amount_inr,>=,10000
+R_KREDITBEE_006,KreditBee,KreditBee Personal Loan for Salaried,product,max_loan_amount_inr,<=,500000
+R_KREDITBEE_007,KreditBee,KreditBee Personal Loan for Salaried,product,min_tenure_months,>=,3
+R_KREDITBEE_008,KreditBee,KreditBee Personal Loan for Salaried,product,max_tenure_months,<=,36
+R_KREDITBEE_009,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,nationality,==,Indian_National
+R_KREDITBEE_010,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,resident_status,==,Resident_Indian
+R_KREDITBEE_011,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,min_age,>=,21
+R_KREDITBEE_012,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,max_age_application,<=,55
+R_KREDITBEE_013,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,max_age_maturity,<=,58
+R_KREDITBEE_014,KreditBee,KreditBee Personal Loan for Salaried,applicant_identity,kyc_required,==,PAN_and_Aadhaar
+R_KREDITBEE_015,KreditBee,KreditBee Personal Loan for Salaried,employment,employment_type_allowed,in,"salaried, self_employed"
+R_KREDITBEE_016,KreditBee,KreditBee Personal Loan for Salaried,employment,employer_category_allowed,in,"All_Employers, MSME, Informal_Corporate, Gig_Economy"
+R_KREDITBEE_017,KreditBee,KreditBee Personal Loan for Salaried,employment_stability,min_total_work_experience_months,>=,3
+R_KREDITBEE_018,KreditBee,KreditBee Personal Loan for Salaried,employment_stability,min_current_job_tenure_corporate,>=,3
+R_KREDITBEE_019,KreditBee,KreditBee Personal Loan for Salaried,employment_stability,min_current_job_tenure_government,>=,3
+R_KREDITBEE_020,KreditBee,KreditBee Personal Loan for Salaried,income,min_monthly_salary_corporate,>=,10000
+R_KREDITBEE_021,KreditBee,KreditBee Personal Loan for Salaried,income,min_monthly_salary_government,>=,10000
+R_KREDITBEE_022,KreditBee,KreditBee Personal Loan for Salaried,income,min_monthly_salary_non_metro,>=,10000
+R_KREDITBEE_023,KreditBee,KreditBee Personal Loan for Salaried,income,salary_credit_mode_allowed,==,Direct_Bank_Transfer
+R_KREDITBEE_024,KreditBee,KreditBee Personal Loan for Salaried,income,cash_salary_accepted,==,false
+R_KREDITBEE_025,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,min_cibil_score,>=,600
+R_KREDITBEE_026,KreditBee,KreditBee Personal Loan for Salaried,credit_bureau,allow_ntc_thin_file,==,true
